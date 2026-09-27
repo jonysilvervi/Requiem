@@ -1,0 +1,310 @@
+{
+  "format": "requiem-comparison",
+  "format_version": "0.1",
+  "id": "CMP-001-003",
+  "generated": "2026-09-24T13:09:47",
+  "status": "COMPLETED",
+  "from": {
+    "id": "SNAP-001",
+    "created": "2026-09-24T11:12:14",
+    "source": "database/snapshots/SNAP-001.json",
+    "source_sha256": "356e7a7adb667b07784e78231e3df5d84b79f1841dabd2a8a24a3fe378c0b91f"
+  },
+  "to": {
+    "id": "SNAP-003",
+    "created": "2026-09-24T11:17:54",
+    "source": "database/project_snapshot.json",
+    "source_sha256": "f589ec27fa3c1b998f1f5d48440e33dc27903fe23203f11be8d1758327217913"
+  },
+  "project": {
+    "name": "REQUIEM",
+    "target": "requiem-tauri"
+  },
+  "environment": {
+    "same_machine_path": true,
+    "same_platform": true
+  },
+  "summary": {
+    "added": 0,
+    "removed": 0,
+    "modified": 1,
+    "unchanged": 61,
+    "unverified": 0,
+    "files_from": 62,
+    "files_to": 62,
+    "directories_from": 32,
+    "directories_to": 32
+  },
+  "changes": {
+    "added": [],
+    "removed": [],
+    "modified": [
+      {
+        "path": "src/App.jsx",
+        "changed_fields": [
+          "size",
+          "modified",
+          "hash"
+        ],
+        "from": {
+          "size": 41427,
+          "modified": "2026-09-22T13:38:57",
+          "hash": "1407b41ece3a602b0517e79b78466c56d94b9882521718ee35e5b856bcbec39d"
+        },
+        "to": {
+          "size": 41430,
+          "modified": "2026-09-24T11:17:12",
+          "hash": "f0bc017923c568a5ee8f78b7ec823372df21c509336b63736b86fbc2e2a7b340"
+        }
+      }
+    ],
+    "unchanged": [
+      {
+        "path": ".gitignore",
+        "changed_fields": []
+      },
+      {
+        "path": "README.md",
+        "changed_fields": []
+      },
+      {
+        "path": "index.html",
+        "changed_fields": []
+      },
+      {
+        "path": "package-lock.json",
+        "changed_fields": []
+      },
+      {
+        "path": "package.json",
+        "changed_fields": []
+      },
+      {
+        "path": "postcss.config.js",
+        "changed_fields": []
+      },
+      {
+        "path": "public/tauri.svg",
+        "changed_fields": []
+      },
+      {
+        "path": "public/vite.svg",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/.gitignore",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/Cargo.lock",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/Cargo.toml",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/build.rs",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/capabilities/default.json",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/gen/schemas/acl-manifests.json",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/gen/schemas/capabilities.json",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/gen/schemas/desktop-schema.json",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/gen/schemas/windows-schema.json",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/128x128.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/128x128@2x.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/32x32.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square107x107Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square142x142Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square150x150Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square284x284Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square30x30Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square310x310Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square44x44Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square71x71Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/Square89x89Logo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/StoreLogo.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/icon.icns",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/icon.ico",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/icons/icon.png",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/src/lib.rs",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/src/main.rs",
+        "changed_fields": []
+      },
+      {
+        "path": "src-tauri/tauri.conf.json",
+        "changed_fields": []
+      },
+      {
+        "path": "src.zip",
+        "changed_fields": []
+      },
+      {
+        "path": "src/App.css",
+        "changed_fields": []
+      },
+      {
+        "path": "src/app/AppRoot.jsx",
+        "changed_fields": []
+      },
+      {
+        "path": "src/app/layout/MainLayout.jsx",
+        "changed_fields": []
+      },
+      {
+        "path": "src/app/layout/index.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/app/shell/RequiemShell.jsx",
+        "changed_fields": []
+      },
+      {
+        "path": "src/app/shell/WindowFrame.jsx",
+        "changed_fields": []
+      },
+      {
+        "path": "src/app/shell/index.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/app/workspace/Workspace.jsx",
+        "changed_fields": []
+      },
+      {
+        "path": "src/assets/react.svg",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core.zip",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/configuration/index.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/contracts/EngineCommand.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/contracts/EngineResponse.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/contracts/EnvironmentState.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/contracts/OperationRequest.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/contracts/OperationResult.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/contracts/UserIntent.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/environment/index.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/intelligence/index.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/core/operations/index.js",
+        "changed_fields": []
+      },
+      {
+        "path": "src/index.css",
+        "changed_fields": []
+      },
+      {
+        "path": "src/main.jsx",
+        "changed_fields": []
+      },
+      {
+        "path": "tailwind.config.js",
+        "changed_fields": []
+      },
+      {
+        "path": "vite.config.js",
+        "changed_fields": []
+      }
+    ],
+    "unverified": []
+  },
+  "warnings": []
+}

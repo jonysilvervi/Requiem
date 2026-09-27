@@ -1,0 +1,10 @@
+{
+  "project": "REQUIEM",
+  "type": "Desktop Tactical Environment and AI-Assisted Modding Platform",
+  "purpose": "Create an intelligence and orchestration layer above game environments.",
+  "core_principle": "Games are environments. REQUIEM is the intelligence and orchestration layer above them.",
+  "independence_rule": "REQUIEM must remain independent from a single game environment.",
+  "current_supported_environment": "S.T.A.L.K.E.R. 2",
+  "memory_core_role": "Preserve project continuity, knowledge, decisions and recovery capability.",
+  "protection_level": "CRITICAL"
+}

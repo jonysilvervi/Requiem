@@ -1,0 +1,38 @@
+{
+  "system": {
+    "name": "REQUIEM Memory Core",
+    "version": "0.1",
+    "status": "development"
+  },
+
+  "project": {
+    "name": "REQUIEM",
+    "root": "../requiem-tauri"
+  },
+
+  "memory": {
+    "identity_enabled": true,
+    "state_tracking_enabled": true,
+    "decision_tracking_enabled": true,
+    "event_tracking_enabled": true,
+    "checkpoint_tracking_enabled": true
+  },
+
+  "automation": {
+    "scanner_enabled": false,
+    "auto_document_update": false,
+    "auto_checkpoint": false
+  },
+
+  "ai": {
+    "gemini_enabled": false,
+    "gpt_enabled": false,
+    "claude_enabled": false
+  },
+
+  "protection": {
+    "allow_silent_changes": false,
+    "protect_critical_memory": true,
+    "preserve_history": true
+  }
+}

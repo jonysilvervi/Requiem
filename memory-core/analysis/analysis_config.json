@@ -1,0 +1,9 @@
+{
+  "input": {
+    "changes_directory": "../review/changes",
+    "current_snapshot": "../database/project_snapshot.json",
+    "snapshot_history_directory": "../database/snapshots",
+    "rules": "analysis_rules.json",
+    "architecture_map": "architecture_map.json"
+  }
+}

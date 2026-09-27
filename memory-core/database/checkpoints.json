@@ -1,0 +1,44 @@
+[
+  {
+    "id": "CP-001",
+    "name": "Documentation Foundation Complete",
+    "date": "2026-09-23",
+    "status": "STABLE",
+    "description": "AI documentation and project continuity foundation completed."
+  },
+  {
+    "id": "CP-002",
+    "name": "Memory Core Foundation Created",
+    "date": "2026-09-24",
+    "status": "ARCHIVED",
+    "description": "Initial Memory Core structure and principles created."
+  },
+  {
+    "id": "CP-003",
+    "name": "Snapshot System v0.1 Complete",
+    "date": "2026-09-24",
+    "status": "STABLE",
+    "description": "REQUIEM Memory Core State Snapshot System v0.1 completed. Verified: SNAP-001 created; SNAP-002 preserved history; SNAP-003 detected file modification."
+  },
+  {
+    "id": "CP-004",
+    "name": "Comparison Layer v0.1 Complete",
+    "date": "2026-09-24",
+    "status": "STABLE",
+    "description": "REQUIEM Memory Core Comparison Layer v0.1 completed. Verified on Windows (added/removed/modified/unchanged/unverified): SNAP-002 -> SNAP-003: 0/0/1/61/0; SNAP-001 -> SNAP-002: 0/0/0/62/0; SNAP-001 -> SNAP-003: 0/0/1/61/0."
+  },
+  {
+    "id": "CP-005",
+    "name": "Change Report and Context Update v0.1 Complete",
+    "date": "2026-09-24",
+    "status": "STABLE",
+    "description": "Change Report Layer v0.1 and Context Update Layer v0.1 completed. Verified on Windows: CHG-001 created and approved; CU-001 created, approved and applied; EVENT-006 added to database/events.json; backup review/backups/CU-001/database/events.json created; identity, state, decisions and checkpoints not modified."
+  },
+  {
+    "id": "CP-006",
+    "name": "Analysis Layer v0.1 Complete",
+    "date": "2026-09-24",
+    "status": "STABLE",
+    "description": "REQUIEM Memory Core Analysis Layer v0.1 completed. Verified on Windows: ANL-001 created from CHG-001 (SNAP-001 -> SNAP-003), status COMPLETED_WITH_WARNINGS (expected warnings for the DRAFT architecture map), findings attention 0 / notice 1 / info 0; reports/latest_analysis.json and reports/latest_analysis.md created; no database, review or context files changed. The architecture map remains a DRAFT template without zones."
+  }
+]

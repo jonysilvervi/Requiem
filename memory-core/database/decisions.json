@@ -1,0 +1,121 @@
+[
+  {
+    "id": "DEC-001",
+    "decision": "REQUIEM must remain game-independent.",
+    "reason": "Future game environments and integrations must be possible without rewriting the foundation.",
+    "status": "ACTIVE",
+    "importance": "CRITICAL"
+  },
+  {
+    "id": "DEC-002",
+    "decision": "Memory Core is currently a development infrastructure tool, not part of the user application.",
+    "reason": "Avoid unnecessary complexity before the system proves its value.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-003",
+    "decision": "AI assists memory management but does not own project truth.",
+    "reason": "Prevent incorrect automatic changes to project history and architecture.",
+    "status": "ACTIVE",
+    "importance": "CRITICAL"
+  },
+  {
+    "id": "DEC-005",
+    "decision": "Snapshots and checkpoints are separate concepts.",
+    "reason": "Snapshots preserve historical project states. Checkpoints represent recovery points.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-006",
+    "decision": "Comparison Layer is an isolated read-only layer.",
+    "reason": "Comparison must not modify snapshots, project files, memory or documentation. Memory Core layers must remain separated.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-007",
+    "decision": "Files with null hash are classified as unverified and are not forced into other categories.",
+    "reason": "A null hash means the file content could not be verified. Any other category would present an unverified fact as verified.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-008",
+    "decision": "Comparison results are stored only as latest reports in reports/. database/comparisons is not created.",
+    "reason": "A comparison result can always be rebuilt from the stored snapshots.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-009",
+    "decision": "Change records (CHG) and context update proposals (CU) are stored in review/, outside project memory.",
+    "reason": "Creating a record or a proposal must not modify project memory. Only approved and applied updates change memory.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-010",
+    "decision": "Project memory is changed by Context Update only through a manual --apply of an APPROVED proposal, after hash verification and backup.",
+    "reason": "Human approval is required before project memory is updated. Memory must not be changed silently or from outdated data.",
+    "status": "ACTIVE",
+    "importance": "CRITICAL"
+  },
+  {
+    "id": "DEC-011",
+    "decision": "Context Update v0.1 operations are limited to snapshot_state and event. Targets are hard-coded: README.md, context/REQUIEM_CONTEXT.md, database/events.json. identity, decisions, checkpoints and state are never targets.",
+    "reason": "Protected memory must not be reachable by automated updates, even through configuration or edited proposals.",
+    "status": "ACTIVE",
+    "importance": "CRITICAL"
+  },
+  {
+    "id": "DEC-012",
+    "decision": "Change records form a chain: CHG.from must equal the previous CHG.to.",
+    "reason": "Change history must have no overlaps and no gaps between recorded snapshots.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-013",
+    "decision": "A change record is created also when there are no changes (no_changes).",
+    "reason": "The chain of change records must not break when two snapshots are identical.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-014",
+    "decision": "Analysis Layer is positioned after Change Report and before Human review: Comparison -> Change Report -> Analysis -> Human review -> Context Update. In v0.1 this step is procedural; the change reporter does not require an analysis.",
+    "reason": "Analysis must support the human decision on a change record. The Memory Core layer order places Analysis before Decision.",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-015",
+    "decision": "Analysis Layer is an isolated, read-only, advisory layer. It reads one change record, its two snapshots, the rules file and the architecture map. It does not read project files, does not use AI, does not modify memory, change records or context update proposals, and is not an input of Context Update.",
+    "reason": "Analysis must not change history or memory. Its results must be reproducible from stored facts.",
+    "status": "ACTIVE",
+    "importance": "CRITICAL"
+  },
+  {
+    "id": "DEC-016",
+    "decision": "Only the latest analysis result is stored: reports/latest_analysis.json and reports/latest_analysis.md (paths fixed in code). No history of analysis results is created. The result records the SHA-256 of all inputs.",
+    "reason": "An analysis result is derived data. It can be rebuilt from the change record, the snapshots, the rules and the architecture map (as in DEC-008).",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  },
+  {
+    "id": "DEC-017",
+    "decision": "The architecture map (analysis/architecture_map.json) is project truth. It is written and approved by a human, separately from the Analysis model. AI may prepare only a DRAFT on request. The analyzer never modifies it.",
+    "reason": "A description of the project architecture must not appear or change automatically.",
+    "status": "ACTIVE",
+    "importance": "CRITICAL"
+  },
+  {
+    "id": "DEC-018",
+    "decision": "Analysis is deterministic and rule-based: signal kinds are fixed in code, their parameters are data written by a human, and the engine contains no project-specific paths. Every finding names its rule, its entries and its evidence. A file that no rule matches receives \"unmapped\" or \"uncategorized\" and is never forced into a class.",
+    "reason": "An interpretation must not be presented as a verified fact (principle of DEC-007). REQUIEM must remain independent from a single environment (DEC-001).",
+    "status": "ACTIVE",
+    "importance": "IMPORTANT"
+  }
+]

@@ -1,0 +1,76 @@
+# REQUIEM MEMORY CORE SCAN REPORT
+Date: 2026-09-24 11:17:54.187732
+Files detected: 62
+
+## Snapshot
+- ID: SNAP-003
+- Created: 2026-09-24T11:17:54
+- Status: CREATED
+- Total files: 62
+- Total directories: 32
+- Stored in: ../database/project_snapshot.json
+- Previous snapshot: SNAP-002 (preserved: ../database/snapshots/SNAP-002.json)
+
+## Files
+- ../../requiem-tauri/.gitignore
+- ../../requiem-tauri/index.html
+- ../../requiem-tauri/package-lock.json
+- ../../requiem-tauri/package.json
+- ../../requiem-tauri/postcss.config.js
+- ../../requiem-tauri/README.md
+- ../../requiem-tauri/src.zip
+- ../../requiem-tauri/tailwind.config.js
+- ../../requiem-tauri/vite.config.js
+- ../../requiem-tauri/public/tauri.svg
+- ../../requiem-tauri/public/vite.svg
+- ../../requiem-tauri/src/App.css
+- ../../requiem-tauri/src/App.jsx
+- ../../requiem-tauri/src/core.zip
+- ../../requiem-tauri/src/index.css
+- ../../requiem-tauri/src/main.jsx
+- ../../requiem-tauri/src/app/AppRoot.jsx
+- ../../requiem-tauri/src/app/layout/index.js
+- ../../requiem-tauri/src/app/layout/MainLayout.jsx
+- ../../requiem-tauri/src/app/shell/index.js
+- ../../requiem-tauri/src/app/shell/RequiemShell.jsx
+- ../../requiem-tauri/src/app/shell/WindowFrame.jsx
+- ../../requiem-tauri/src/app/workspace/Workspace.jsx
+- ../../requiem-tauri/src/assets/react.svg
+- ../../requiem-tauri/src/core/configuration/index.js
+- ../../requiem-tauri/src/core/contracts/EngineCommand.js
+- ../../requiem-tauri/src/core/contracts/EngineResponse.js
+- ../../requiem-tauri/src/core/contracts/EnvironmentState.js
+- ../../requiem-tauri/src/core/contracts/OperationRequest.js
+- ../../requiem-tauri/src/core/contracts/OperationResult.js
+- ../../requiem-tauri/src/core/contracts/UserIntent.js
+- ../../requiem-tauri/src/core/environment/index.js
+- ../../requiem-tauri/src/core/intelligence/index.js
+- ../../requiem-tauri/src/core/operations/index.js
+- ../../requiem-tauri/src-tauri/.gitignore
+- ../../requiem-tauri/src-tauri/build.rs
+- ../../requiem-tauri/src-tauri/Cargo.lock
+- ../../requiem-tauri/src-tauri/Cargo.toml
+- ../../requiem-tauri/src-tauri/tauri.conf.json
+- ../../requiem-tauri/src-tauri/capabilities/default.json
+- ../../requiem-tauri/src-tauri/gen/schemas/acl-manifests.json
+- ../../requiem-tauri/src-tauri/gen/schemas/capabilities.json
+- ../../requiem-tauri/src-tauri/gen/schemas/desktop-schema.json
+- ../../requiem-tauri/src-tauri/gen/schemas/windows-schema.json
+- ../../requiem-tauri/src-tauri/icons/128x128.png
+- ../../requiem-tauri/src-tauri/icons/128x128@2x.png
+- ../../requiem-tauri/src-tauri/icons/32x32.png
+- ../../requiem-tauri/src-tauri/icons/icon.icns
+- ../../requiem-tauri/src-tauri/icons/icon.ico
+- ../../requiem-tauri/src-tauri/icons/icon.png
+- ../../requiem-tauri/src-tauri/icons/Square107x107Logo.png
+- ../../requiem-tauri/src-tauri/icons/Square142x142Logo.png
+- ../../requiem-tauri/src-tauri/icons/Square150x150Logo.png
+- ../../requiem-tauri/src-tauri/icons/Square284x284Logo.png
+- ../../requiem-tauri/src-tauri/icons/Square30x30Logo.png
+- ../../requiem-tauri/src-tauri/icons/Square310x310Logo.png
+- ../../requiem-tauri/src-tauri/icons/Square44x44Logo.png
+- ../../requiem-tauri/src-tauri/icons/Square71x71Logo.png
+- ../../requiem-tauri/src-tauri/icons/Square89x89Logo.png
+- ../../requiem-tauri/src-tauri/icons/StoreLogo.png
+- ../../requiem-tauri/src-tauri/src/lib.rs
+- ../../requiem-tauri/src-tauri/src/main.rs

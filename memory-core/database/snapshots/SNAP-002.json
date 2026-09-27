@@ -1,0 +1,452 @@
+{
+  "id": "SNAP-002",
+  "created": "2026-09-24T11:15:00",
+  "project": {
+    "name": "REQUIEM",
+    "target": "requiem-tauri"
+  },
+  "environment": {
+    "machine_path": "E:/Games/STALKER 2 - REQUIEM/NECESSARY FILES/requiem-tauri",
+    "platform": "Windows"
+  },
+  "statistics": {
+    "total_files": 62,
+    "total_directories": 32
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 277,
+      "extension": "",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "d50ab07e11fa4bf3b1c7c3312e1d7baeab56cca756832ccf40476823ad2a38b7"
+    },
+    {
+      "path": "README.md",
+      "size": 360,
+      "extension": ".md",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "525e0a942482d7bb0ab018fb028aea340e688d005feddd6d1db92f96b00eed11"
+    },
+    {
+      "path": "index.html",
+      "size": 377,
+      "extension": ".html",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "aa82fa3f7deb59c918acea8245287195dbae063062245688c487aca7c2af32cd"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 77810,
+      "extension": ".json",
+      "modified": "2026-09-22T19:50:22",
+      "hash": "2fb2825f71d44e3be8c07211f8b6b27adb5f45636c63e35a823f2d4b553ae88d"
+    },
+    {
+      "path": "package.json",
+      "size": 704,
+      "extension": ".json",
+      "modified": "2026-09-20T19:33:16",
+      "hash": "d90f0722368b66a4ccbe5d621681ac9d9baf3da9853372d565105146cef3ccf3"
+    },
+    {
+      "path": "postcss.config.js",
+      "size": 84,
+      "extension": ".js",
+      "modified": "2026-09-20T19:26:19",
+      "hash": "b554e0e63770163ec5e5023f0cdbe7b13acbce9ae1665225667a358cf84ea89c"
+    },
+    {
+      "path": "public/tauri.svg",
+      "size": 2605,
+      "extension": ".svg",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "3f32698a9cb64f4d06d4df89ecb903418347589a17d297208a7f68741a8b5672"
+    },
+    {
+      "path": "public/vite.svg",
+      "size": 1497,
+      "extension": ".svg",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+    },
+    {
+      "path": "src-tauri/.gitignore",
+      "size": 173,
+      "extension": "",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "e1b11c0407131ad35a1f11d8ec2545c53de147a76f05e264e5b500a14b977332"
+    },
+    {
+      "path": "src-tauri/Cargo.lock",
+      "size": 121697,
+      "extension": ".lock",
+      "modified": "2026-09-20T19:27:43",
+      "hash": "227d4360e00f8bfa1f50b29dde35e17180fe66b54722681e523c845726147ca4"
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "size": 931,
+      "extension": ".toml",
+      "modified": "2026-09-20T19:27:11",
+      "hash": "1aaf5dbc1330722b02b1e4655959793bede61a8c883d273b58a4635011e6f81e"
+    },
+    {
+      "path": "src-tauri/build.rs",
+      "size": 42,
+      "extension": ".rs",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "4ae2333b11623039cc115e29b696e7ff5cdfcd5b7d628280ddf48fa733e6418d"
+    },
+    {
+      "path": "src-tauri/capabilities/default.json",
+      "size": 355,
+      "extension": ".json",
+      "modified": "2026-09-20T20:28:53",
+      "hash": "0a167d3c1517ce6a63b6e3ac4e28da2c911a852b9860036256aff5850ef1bf06"
+    },
+    {
+      "path": "src-tauri/gen/schemas/acl-manifests.json",
+      "size": 69499,
+      "extension": ".json",
+      "modified": "2026-09-20T19:31:25",
+      "hash": "4d93885b464518dae2a2ed75ec63efc2c9d5a8991f51c26e6764dcb4264623c5"
+    },
+    {
+      "path": "src-tauri/gen/schemas/capabilities.json",
+      "size": 272,
+      "extension": ".json",
+      "modified": "2026-09-20T20:30:03",
+      "hash": "4edf4cb47c4915fdb7a96cad419a898a1773dc9caf4aea964c0afc21fc0fb5df"
+    },
+    {
+      "path": "src-tauri/gen/schemas/desktop-schema.json",
+      "size": 129129,
+      "extension": ".json",
+      "modified": "2026-09-20T19:31:25",
+      "hash": "623c82e1cf0b1093b61b4b0900f8e2f06fbef272b8e5c24cc90dde35b063da97"
+    },
+    {
+      "path": "src-tauri/gen/schemas/windows-schema.json",
+      "size": 129129,
+      "extension": ".json",
+      "modified": "2026-09-20T19:31:25",
+      "hash": "623c82e1cf0b1093b61b4b0900f8e2f06fbef272b8e5c24cc90dde35b063da97"
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "size": 1593,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "1f3689f6374b0553996fdc99743799216703835070145d7f0e6ec11e6280139e"
+    },
+    {
+      "path": "src-tauri/icons/128x128@2x.png",
+      "size": 2861,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "69194785eef4323955af73b0c03362ac0804db056c2424f9715076cabc0ed103"
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "size": 567,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "d151f11e325f7502de0c739a2e51697aa569fd4701ae6e11fae1a3b4c7d5f157"
+    },
+    {
+      "path": "src-tauri/icons/Square107x107Logo.png",
+      "size": 1340,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "fd8658ff0e2c177ce0779d11fea1574e9d7d82a52a3a9197038f37b07fe24475"
+    },
+    {
+      "path": "src-tauri/icons/Square142x142Logo.png",
+      "size": 1691,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "c348fcf2d2f2f9714a41925184926f77f440676987d233ae1daf4fd94fda245f"
+    },
+    {
+      "path": "src-tauri/icons/Square150x150Logo.png",
+      "size": 1738,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "d46dc2bc568f911b9cb978de68b4a7e3ad458fbac15196597849c43c40f4b65a"
+    },
+    {
+      "path": "src-tauri/icons/Square284x284Logo.png",
+      "size": 3115,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "80d93a5257c89ea57023c30500c889b4df062430ffb0b4fed4ca4785d13e29ac"
+    },
+    {
+      "path": "src-tauri/icons/Square30x30Logo.png",
+      "size": 536,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "c3ce70e22ec2ed3ea2d0362a767d087e6cadb93ec71e80010649f892520175f4"
+    },
+    {
+      "path": "src-tauri/icons/Square310x310Logo.png",
+      "size": 3447,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "624dd93ddb1f0d69f2a4aa7af0b0646ae3ae6347cbb42dab56ef88dba7f38d07"
+    },
+    {
+      "path": "src-tauri/icons/Square44x44Logo.png",
+      "size": 777,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "f9eca6f00dba41cfecfedbc9a6f88014b4ee0f9dbf016e202c7ede09c60107ef"
+    },
+    {
+      "path": "src-tauri/icons/Square71x71Logo.png",
+      "size": 1020,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "66a6b51da8962a9472c9d29b1b08e3309561521bf7fbaac52b9f680df13ff487"
+    },
+    {
+      "path": "src-tauri/icons/Square89x89Logo.png",
+      "size": 1181,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "fe8da53273722bb6fd66e98bf6810e8a7db22aeff27c6c1a096d57ba556b9ef4"
+    },
+    {
+      "path": "src-tauri/icons/StoreLogo.png",
+      "size": 848,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "5412fce324344999aad82f6b69abcaa6c8792eac7b79a4b321aaaeacd0525eaf"
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "size": 98451,
+      "extension": ".icns",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "3dc10493b7de48a61de58f768f8a5708d3a44a068c148cedf0502b9b9b71ba5d"
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "size": 37710,
+      "extension": ".ico",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "e38ca88e1d5490f3dcbc3c3fa525f7fcb7b80fff3cb2f3a4eb1b2d018c0915c1"
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "size": 5664,
+      "extension": ".png",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "b5d93c8ec365c08b11bd006e46a46e227c681d30bb295af3d017573bfc752a83"
+    },
+    {
+      "path": "src-tauri/src/lib.rs",
+      "size": 1977,
+      "extension": ".rs",
+      "modified": "2026-09-20T20:28:19",
+      "hash": "42d1a4b3a3885867ed0eb4345f3a4edfcf47f4e5c42b4a04359dc8515af2f299"
+    },
+    {
+      "path": "src-tauri/src/main.rs",
+      "size": 194,
+      "extension": ".rs",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "06c9ad96ce3826b637e2769f3223981bd5f93a4ee8afc35288a8cb6ded7878b6"
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "size": 875,
+      "extension": ".json",
+      "modified": "2026-09-20T20:29:29",
+      "hash": "719855f4dba2b15bbc27a9df89fcf10d1f8554f41f5f002c662faa49326636cf"
+    },
+    {
+      "path": "src.zip",
+      "size": 32682,
+      "extension": ".zip",
+      "modified": "2026-09-24T10:42:26",
+      "hash": "ab67e95540bb886e4400c27b072752d29ba570a60b139a54b04ebb18436ed2e3"
+    },
+    {
+      "path": "src/App.css",
+      "size": 0,
+      "extension": ".css",
+      "modified": "2026-09-20T19:33:36",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/App.jsx",
+      "size": 41427,
+      "extension": ".jsx",
+      "modified": "2026-09-22T13:38:57",
+      "hash": "1407b41ece3a602b0517e79b78466c56d94b9882521718ee35e5b856bcbec39d"
+    },
+    {
+      "path": "src/app/AppRoot.jsx",
+      "size": 121,
+      "extension": ".jsx",
+      "modified": "2026-09-22T20:42:17",
+      "hash": "dc73d35633d0719bc0cd1b69c87129f1642c8fb8dcd910a36e67dbf3d1eb1ec5"
+    },
+    {
+      "path": "src/app/layout/MainLayout.jsx",
+      "size": 189,
+      "extension": ".jsx",
+      "modified": "2026-09-22T20:45:39",
+      "hash": "b1c479546ec928438310488620a36c35b41724e0786e4dc3458246b8021a5e32"
+    },
+    {
+      "path": "src/app/layout/index.js",
+      "size": 53,
+      "extension": ".js",
+      "modified": "2026-09-22T20:38:01",
+      "hash": "a80375e8730f846823d2f94c795de19905599284fc8364762d1935664911cc19"
+    },
+    {
+      "path": "src/app/shell/RequiemShell.jsx",
+      "size": 214,
+      "extension": ".jsx",
+      "modified": "2026-09-22T20:48:58",
+      "hash": "cbadd4f072ddd96b6a21e79689a854105420088f219ed5908aeee58223859b1b"
+    },
+    {
+      "path": "src/app/shell/WindowFrame.jsx",
+      "size": 146,
+      "extension": ".jsx",
+      "modified": "2026-09-22T20:48:35",
+      "hash": "6ad736c680545c158b13ad29a154eda60aee217b3d586a406b5f9fc4627d1cec"
+    },
+    {
+      "path": "src/app/shell/index.js",
+      "size": 57,
+      "extension": ".js",
+      "modified": "2026-09-22T20:37:29",
+      "hash": "10deeec4edd73c9c602804f360facd7ded4fc98cae49dbfbda885de72b50bcce"
+    },
+    {
+      "path": "src/app/workspace/Workspace.jsx",
+      "size": 138,
+      "extension": ".jsx",
+      "modified": "2026-09-22T20:45:09",
+      "hash": "216501460b62dee8a5e3dcd7083c2c72fec6e5823d1d10f96ade7b42f1e0bbcf"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "size": 4126,
+      "extension": ".svg",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+    },
+    {
+      "path": "src/core.zip",
+      "size": 4078,
+      "extension": ".zip",
+      "modified": "2026-09-23T16:25:36",
+      "hash": "ec2f5775a7ce86657e36c9509b73010bc907d99054d3a98650b8181ee75a672b"
+    },
+    {
+      "path": "src/core/configuration/index.js",
+      "size": 187,
+      "extension": ".js",
+      "modified": "2026-09-22T20:26:10",
+      "hash": "0935ecc42957a79609ebde3b43e62b4b0eb0677cc212256031a3a6b1a27d5005"
+    },
+    {
+      "path": "src/core/contracts/EngineCommand.js",
+      "size": 298,
+      "extension": ".js",
+      "modified": "2026-09-22T20:23:02",
+      "hash": "07076f90522b825e7464aa3db4c2fe91146075bfbf99f9f8c122d5311aeba4b7"
+    },
+    {
+      "path": "src/core/contracts/EngineResponse.js",
+      "size": 294,
+      "extension": ".js",
+      "modified": "2026-09-22T20:23:11",
+      "hash": "82c6974f27cab24c0e382691a0d86ce4d1a83c475ceaff49b6e505ac5a287bee"
+    },
+    {
+      "path": "src/core/contracts/EnvironmentState.js",
+      "size": 262,
+      "extension": ".js",
+      "modified": "2026-09-22T20:22:54",
+      "hash": "bdb8049facb3a63b01ab53085ea96521b2d8bce4d77e9afc8840dc41f9153033"
+    },
+    {
+      "path": "src/core/contracts/OperationRequest.js",
+      "size": 265,
+      "extension": ".js",
+      "modified": "2026-09-22T20:22:37",
+      "hash": "360de938d26ef4bc58804ad16064181b715353f1c3bdbcf64b34963606d07028"
+    },
+    {
+      "path": "src/core/contracts/OperationResult.js",
+      "size": 244,
+      "extension": ".js",
+      "modified": "2026-09-22T20:22:45",
+      "hash": "5aedea9b7b2656e34d0956dac5d0ce4359aa4ca3b539608dc4798795e10ccf49"
+    },
+    {
+      "path": "src/core/contracts/UserIntent.js",
+      "size": 222,
+      "extension": ".js",
+      "modified": "2026-09-22T20:22:25",
+      "hash": "49649a30f5653a619fc979829d4bcdd2d1641dd1a22ceea82c087d96458a7af4"
+    },
+    {
+      "path": "src/core/environment/index.js",
+      "size": 195,
+      "extension": ".js",
+      "modified": "2026-09-22T20:26:46",
+      "hash": "9e14bdf516ffa54b95d13c13b49a35c290ad4035a8c517a05b2acecd4f87b8f0"
+    },
+    {
+      "path": "src/core/intelligence/index.js",
+      "size": 196,
+      "extension": ".js",
+      "modified": "2026-09-22T20:27:04",
+      "hash": "7303a37b550fe8f032832f27ff405a72958f1b5245cc09675d9357035e58d2a0"
+    },
+    {
+      "path": "src/core/operations/index.js",
+      "size": 203,
+      "extension": ".js",
+      "modified": "2026-09-22T20:26:55",
+      "hash": "84d0337c3a13fe3cb3458fd1b79f0f9058b1c4f4ca8bdd9c24468dfd02e0113b"
+    },
+    {
+      "path": "src/index.css",
+      "size": 30878,
+      "extension": ".css",
+      "modified": "2026-09-22T13:38:59",
+      "hash": "90213ae798a49954b6989423593781281f542117f26a5a8bf409e9037b900667"
+    },
+    {
+      "path": "src/main.jsx",
+      "size": 264,
+      "extension": ".jsx",
+      "modified": "2026-09-22T20:47:03",
+      "hash": "c884e426d6a4e79ddbbb0a137388dff251c5cb4c550462250208a6bc9eb80759"
+    },
+    {
+      "path": "tailwind.config.js",
+      "size": 191,
+      "extension": ".js",
+      "modified": "2026-09-20T19:25:53",
+      "hash": "4a094af8deb0779a4117709d5782f52b6a4795a18246d99a58b3d5e90da2d560"
+    },
+    {
+      "path": "vite.config.js",
+      "size": 837,
+      "extension": ".js",
+      "modified": "2026-09-20T19:23:36",
+      "hash": "faee181752a01daa8e813ebf880d9a227490139370f47865a74df75917a5d5e5"
+    }
+  ]
+}

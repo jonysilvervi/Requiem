@@ -1,0 +1,77 @@
+{
+  "format": "requiem-change-record",
+  "format_version": "0.1",
+  "id": "CHG-001",
+  "created": "2026-09-24T13:52:28",
+  "status": "APPROVED",
+  "review": {
+    "decision": "APPROVED",
+    "reviewed": "2026-09-24T13:52:32",
+    "note": "Windows verification"
+  },
+  "comparison": {
+    "id": "CMP-001-003",
+    "generated": "2026-09-24T13:09:47",
+    "status": "COMPLETED",
+    "result_sha256": "9032c0226b9592e4caa4494b9aba340cb85f05bc1921d07841a350b2c49904f0"
+  },
+  "from": {
+    "id": "SNAP-001",
+    "created": "2026-09-24T11:12:14",
+    "source_sha256": "356e7a7adb667b07784e78231e3df5d84b79f1841dabd2a8a24a3fe378c0b91f"
+  },
+  "to": {
+    "id": "SNAP-003",
+    "created": "2026-09-24T11:17:54",
+    "source_sha256": "f589ec27fa3c1b998f1f5d48440e33dc27903fe23203f11be8d1758327217913"
+  },
+  "project": {
+    "name": "REQUIEM",
+    "target": "requiem-tauri"
+  },
+  "summary": {
+    "added": 0,
+    "removed": 0,
+    "modified": 1,
+    "unchanged": 61,
+    "unverified": 0,
+    "files_from": 62,
+    "files_to": 62,
+    "directories_from": 32,
+    "directories_to": 32
+  },
+  "no_changes": false,
+  "areas": [
+    {
+      "area": "src",
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "unverified": 0
+    }
+  ],
+  "entries": [
+    {
+      "entry": "CHG-001/1",
+      "class": "modified",
+      "path": "src/App.jsx",
+      "area": "src",
+      "changed_fields": [
+        "size",
+        "modified",
+        "hash"
+      ],
+      "from": {
+        "size": 41427,
+        "modified": "2026-09-22T13:38:57",
+        "hash": "1407b41ece3a602b0517e79b78466c56d94b9882521718ee35e5b856bcbec39d"
+      },
+      "to": {
+        "size": 41430,
+        "modified": "2026-09-24T11:17:12",
+        "hash": "f0bc017923c568a5ee8f78b7ec823372df21c509336b63736b86fbc2e2a7b340"
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,181 @@
+{
+  "format": "requiem-analysis-rules",
+  "format_version": "0.1",
+  "revision": 1,
+
+  "categories": [
+    {
+      "id": "manifest",
+      "name": "Dependency manifest",
+      "names": ["package.json", "Cargo.toml"],
+      "suffixes": []
+    },
+    {
+      "id": "lockfile",
+      "name": "Dependency lock file",
+      "names": ["package-lock.json", "Cargo.lock", "yarn.lock", "pnpm-lock.yaml"],
+      "suffixes": []
+    },
+    {
+      "id": "vcs",
+      "name": "Version control file",
+      "names": [".gitignore", ".gitattributes"],
+      "suffixes": []
+    },
+    {
+      "id": "tool-config",
+      "name": "Tool configuration",
+      "names": [],
+      "suffixes": [".config.js", ".config.ts", ".config.mjs", ".config.cjs", ".conf.json"]
+    },
+    {
+      "id": "source",
+      "name": "Source code",
+      "names": [],
+      "suffixes": [".js", ".jsx", ".ts", ".tsx", ".mjs", ".cjs", ".rs", ".py"]
+    },
+    {
+      "id": "style",
+      "name": "Stylesheet",
+      "names": [],
+      "suffixes": [".css", ".scss", ".sass", ".less"]
+    },
+    {
+      "id": "markup",
+      "name": "Markup",
+      "names": [],
+      "suffixes": [".html"]
+    },
+    {
+      "id": "data",
+      "name": "Data file",
+      "names": [],
+      "suffixes": [".json", ".toml", ".yaml", ".yml"]
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "names": [],
+      "suffixes": [".md", ".txt"]
+    },
+    {
+      "id": "image",
+      "name": "Image",
+      "names": [],
+      "suffixes": [".png", ".svg", ".ico", ".icns", ".jpg", ".jpeg", ".gif", ".webp"]
+    },
+    {
+      "id": "archive",
+      "name": "Archive",
+      "names": [],
+      "suffixes": [".zip", ".7z", ".rar", ".tar", ".gz"]
+    }
+  ],
+
+  "signals": [
+    {
+      "id": "S-UNVERIFIED",
+      "kind": "unverified",
+      "enabled": true,
+      "level": "attention",
+      "text": "File content could not be verified (null hash).",
+      "params": {}
+    },
+    {
+      "id": "S-ATTENTION-ZONE",
+      "kind": "attention_zone",
+      "enabled": true,
+      "level": "attention",
+      "text": "Changes in a zone marked for attention in the architecture map.",
+      "params": {}
+    },
+    {
+      "id": "S-PAIR-NPM",
+      "kind": "paired_files",
+      "enabled": true,
+      "level": "notice",
+      "text": "package.json and package-lock.json did not change together.",
+      "params": { "first": "package.json", "second": "package-lock.json" }
+    },
+    {
+      "id": "S-PAIR-CARGO",
+      "kind": "paired_files",
+      "enabled": true,
+      "level": "notice",
+      "text": "Cargo.toml and Cargo.lock did not change together.",
+      "params": { "first": "Cargo.toml", "second": "Cargo.lock" }
+    },
+    {
+      "id": "S-RENAME-CANDIDATE",
+      "kind": "rename_candidate",
+      "enabled": true,
+      "level": "notice",
+      "text": "Removed and added files have identical content.",
+      "params": {}
+    },
+    {
+      "id": "S-CASE-CANDIDATE",
+      "kind": "case_candidate",
+      "enabled": true,
+      "level": "notice",
+      "text": "Removed and added paths differ only in letter case.",
+      "params": {}
+    },
+    {
+      "id": "S-NEW-TOP-LEVEL",
+      "kind": "new_top_level",
+      "enabled": true,
+      "level": "notice",
+      "text": "A new top-level folder appeared.",
+      "params": {}
+    },
+    {
+      "id": "S-EMPTY-FILE",
+      "kind": "empty_file",
+      "enabled": true,
+      "level": "notice",
+      "text": "File size is 0 bytes.",
+      "params": {}
+    },
+    {
+      "id": "S-ARCHIVE",
+      "kind": "category_changed",
+      "enabled": true,
+      "level": "notice",
+      "text": "An archive file was added or modified in the project tree.",
+      "params": { "categories": ["archive"], "classes": ["added", "modified"] }
+    },
+    {
+      "id": "S-UNMAPPED",
+      "kind": "unmapped",
+      "enabled": true,
+      "level": "notice",
+      "text": "Paths are not covered by the architecture map.",
+      "params": {}
+    },
+    {
+      "id": "S-SIZE-DELTA",
+      "kind": "size_delta",
+      "enabled": true,
+      "level": "info",
+      "text": "File size changed significantly.",
+      "params": { "min_bytes": 10240, "min_ratio": 0.5 }
+    },
+    {
+      "id": "S-GENERATED-ZONE",
+      "kind": "generated_zone",
+      "enabled": true,
+      "level": "info",
+      "text": "Changes in a zone of generated files.",
+      "params": {}
+    },
+    {
+      "id": "S-UNCATEGORIZED",
+      "kind": "uncategorized",
+      "enabled": true,
+      "level": "info",
+      "text": "File type is not covered by the categories.",
+      "params": {}
+    }
+  ]
+}

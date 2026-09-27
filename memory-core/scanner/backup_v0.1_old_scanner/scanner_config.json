@@ -1,0 +1,22 @@
+{
+  "project_path": "../../requiem-tauri",
+
+  "scan": {
+    "track_files": true,
+    "track_directories": true,
+    "track_dependencies": true
+  },
+
+  "ignore": [
+    "node_modules",
+    "target",
+    ".git",
+    "dist",
+    "out"
+  ],
+
+  "output": {
+    "report_directory": "../reports",
+    "report_name": "latest_scan.md"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "input": {
+    "comparison_result": "../reports/latest_comparison.json",
+    "current_snapshot": "../database/project_snapshot.json",
+    "snapshot_history_directory": "../database/snapshots"
+  },
+
+  "output": {
+    "changes_directory": "../review/changes"
+  }
+}

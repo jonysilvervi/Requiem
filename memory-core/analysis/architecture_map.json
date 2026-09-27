@@ -1,0 +1,125 @@
+{
+  "format": "requiem-architecture-map",
+  "format_version": "0.1",
+  "revision": 2,
+
+  "project": {
+    "name": "REQUIEM",
+    "target": "requiem-tauri"
+  },
+
+  "status": "DRAFT",
+  "approved": null,
+
+  "description": "Architecture knowledge map for REQUIEM ecosystem.",
+
+  "zones": [
+    {
+      "id": "zone-memory",
+      "name": "Memory Core",
+      "description": "Knowledge preservation and project understanding system.",
+      "paths": [
+        "database/",
+        "context/",
+        "reports/",
+        "review/"
+      ],
+      "attention": false,
+      "generated": false
+    },
+    {
+      "id": "zone-engine",
+      "name": "Engine",
+      "description": "Core execution environment and runtime systems.",
+      "paths": [
+        "engine/"
+      ],
+      "attention": false,
+      "generated": true
+    },
+    {
+      "id": "zone-tools",
+      "name": "Tools",
+      "description": "Development and supporting utilities.",
+      "paths": [
+        "tools/"
+      ],
+      "attention": false,
+      "generated": false
+    },
+    {
+      "id": "zone-projects",
+      "name": "Projects",
+      "description": "Independent projects developed inside REQUIEM ecosystem.",
+      "paths": [
+        "projects/"
+      ],
+      "attention": false,
+      "generated": false
+    }
+  ],
+
+  "systems": [
+    {
+      "id": "system-memory-core",
+      "name": "Memory Core",
+      "zone": "zone-memory",
+      "purpose": "Preserve and analyze knowledge about projects."
+    },
+    {
+      "id": "system-engine",
+      "name": "REQUIEM Engine",
+      "zone": "zone-engine",
+      "purpose": "Provide core execution capabilities for projects."
+    },
+    {
+      "id": "system-tools",
+      "name": "Development Tools",
+      "zone": "zone-tools",
+      "purpose": "Provide utilities supporting development workflow."
+    },
+    {
+      "id": "system-requiem-tauri",
+      "name": "requiem-tauri",
+      "zone": "zone-projects",
+      "purpose": "Primary application project inside REQUIEM ecosystem."
+    }
+  ],
+
+  "relationships": [
+    {
+      "from": "system-memory-core",
+      "to": "system-requiem-tauri",
+      "type": "observes"
+    },
+    {
+      "from": "system-tools",
+      "to": "system-memory-core",
+      "type": "provides-information"
+    },
+    {
+      "from": "system-engine",
+      "to": "system-requiem-tauri",
+      "type": "supports"
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "requiem-tauri",
+      "description": "Current REQUIEM application project."
+    }
+  ],
+
+  "shared_knowledge": {
+    "patterns": [],
+    "solutions": [],
+    "experience": []
+  },
+
+  "metadata": {
+    "created": "2026-09-24",
+    "last_updated": "2026-09-24",
+    "maintainer": "human"
+  }
+}
