@@ -47,21 +47,22 @@ REQUIEM Visual Core (Decision #011).
 - R0 migration plan accepted, option A (Decision #013, docs/app/R0_MIGRATION_PLAN.md).
 - GPT project instructions saved (docs/ai/GPT/GPT_PROJECT_INSTRUCTIONS.md); Claude working rules recorded (docs/ai/CLAUDE/CLAUDE_WORKING_RULES.md); citation checker added (tools/refcheck_km.py).
 - New GPT chat restored the full context from the repository alone (context recovery test passed).
+- Information standard recorded (Decision #014 [ED-014]); identifier registry initialized in docs/system/REQUIEM_DOCUMENTATION_INDEX.md.
+- Reference for the four calibrated colors decided by the owner: R0 values with all four Dev Panel sliders at their default 1.00 (used by [TASK-001]).
 
 ---
 
 # NEXT ACTIONS
 
-1. GPT writes the task specification for step 1 of docs/app/R0_MIGRATION_PLAN.md (L0 SHELL + theme + color tokens).
-2. Claude executes it in a new session, working in jonysilvervi/requiem-tauri; the owner checks the result with npm run tauri dev.
-3. Owner: say where the PowerShell Execution Engine code lives (docs/app/NOTES.md, finding 6).
+1. Ecosystem ROADMAP, based only on repository evidence (GPT drafts, owner approves, Claude saves to the repository).
+2. [TASK-001] ([STEP-R0-01]): status SPECIFIED, not executed. The specification is prepared by GPT; Claude executes it in Claude Code after the roadmap; the owner checks the result with npm run tauri dev.
+3. Owner: answer [Q-001] — where the PowerShell Execution Engine code lives.
 
 ---
 
 # OPEN QUESTIONS
 
-- Which values are the reference for the four calibrated colors (docs/app/R0_MIGRATION_PLAN.md, step 1) — set by the step 1 specification.
-- Location of the PowerShell Execution Engine code (docs/app/NOTES.md, finding 6).
+- [Q-001] Location of the PowerShell Execution Engine code (related: [ISS-006]).
 
 ---
 
