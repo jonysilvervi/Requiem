@@ -55,7 +55,7 @@ REQUIEM Visual Core (Decision #011).
 # NEXT ACTIONS
 
 1. Ecosystem ROADMAP, based only on repository evidence (GPT drafts, owner approves, Claude saves to the repository).
-2. [TASK-001] ([STEP-R0-01]): status SPECIFIED, not executed. The specification is prepared by GPT; Claude executes it in Claude Code after the roadmap; the owner checks the result with npm run tauri dev.
+2. [TASK-001] ([STEP-R0-01]): status SPECIFIED, not executed. The specification is stored in docs/app/tasks/TASK-001_R0_STEP1_L0_SHELL.md; Claude executes it in Claude Code after the roadmap; the owner checks the result with npm run tauri dev.
 3. Owner: answer [Q-001] — where the PowerShell Execution Engine code lives.
 
 ---

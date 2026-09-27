@@ -178,9 +178,9 @@ Source: docs/system/REQUIEM_DECISION_LOG.md. Not related to Memory Core `DEC-` r
 
 ## TASK
 
-| ID | Object | Area | Related | Source |
-|---|---|---|---|---|
-| TASK-001 | R0 migration step 1 — L0 SHELL + static dark theme + calibrated color tokens | AREA-VC | STEP-R0-01 | docs/app/R0_MIGRATION_PLAN.md, section Steps, step 1 |
+| ID | Object | Area | Status | Related | Source | Specification |
+|---|---|---|---|---|---|---|
+| TASK-001 | R0 migration step 1 — L0 SHELL + static dark theme + calibrated color tokens | AREA-VC | SPECIFIED | STEP-R0-01 | docs/app/R0_MIGRATION_PLAN.md, section Steps, step 1 | docs/app/tasks/TASK-001_R0_STEP1_L0_SHELL.md |
 
 ## STEP
 
