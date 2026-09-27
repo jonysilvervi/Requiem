@@ -45,6 +45,8 @@ REQUIEM Visual Core (Decision #011).
 - Application code put under git: repository jonysilvervi/requiem-tauri.
 - Phase 1 stays open until the foundation is polished (Decision #012).
 - R0 migration plan accepted, option A (Decision #013, docs/app/R0_MIGRATION_PLAN.md).
+- GPT project instructions saved (docs/ai/GPT/GPT_PROJECT_INSTRUCTIONS.md); Claude working rules recorded (docs/ai/CLAUDE/CLAUDE_WORKING_RULES.md); citation checker added (tools/refcheck_km.py).
+- New GPT chat restored the full context from the repository alone (context recovery test passed).
 
 ---
 
