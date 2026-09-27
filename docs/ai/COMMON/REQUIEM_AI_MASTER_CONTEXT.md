@@ -1,6 +1,6 @@
 # REQUIEM AI MASTER CONTEXT
 
-Version: 1.0 Draft
+Version: 1.1 Draft
 
 Document Type:
 AI Integration Context
@@ -27,6 +27,15 @@ The first supported environment is S.T.A.L.K.E.R. 2.
 However, S.T.A.L.K.E.R. 2 is not the center of the system.
 
 The center is REQUIEM itself.
+
+REQUIEM is an ecosystem (memory-core/context/REQUIEM_GLOSSARY.md, section 3):
+
+- Projects — for example REQUIEM Application (the desktop application, requiem-tauri), REQUIEM Mod Pack, Memory Core Development Project;
+- REQUIEM Engine;
+- Tools;
+- Memory Core — the project continuity system.
+
+All documentation lives in the repository jonysilvervi/Requiem (Decision #008).
 
 ---
 
@@ -210,21 +219,21 @@ Core systems must never depend directly on a specific environment.
 
 # 5. CURRENT PROJECT STATE
 
-Current phase:
+Active work stream:
 
-PHASE 1 — FOUNDATION CONSOLIDATION
+REQUIEM Visual Core (Decision #011).
 
-Completed:
+Frozen:
 
-- Initial architecture created.
-- Core boundaries created.
-- Contract layer created.
-- Application Shell created.
-- Visual Core foundation created.
+- Execution Engine (PowerShell) (Decision #010);
+- Memory Core development, paused at REQUIEM_KNOWLEDGE_MODEL.md v0.5 (Decision #009);
+- new architecture documentation (Decision #010).
 
-Current focus:
+REQUIEM Application state:
 
-Creating a stable monolithic foundation before implementing advanced functionality.
+Recorded in docs/app/REQUIEM_CURRENT_STATE_SNAPSHOT.md. The application documents disagree about Phase 1 progress (docs/app/NOTES.md); the real code is the reference.
+
+The current position between sessions is recorded in docs/system/REQUIEM_ACTIVE_SESSION.md.
 
 ---
 
@@ -241,6 +250,22 @@ Current status:
 FROZEN.
 
 Do not expand PowerShell integration during foundation work.
+
+---
+
+## Memory Core
+
+Memory Core development is paused (Decision #009).
+
+The implemented layers (checkpoint CP-006) remain usable. No new Memory Core work starts without an explicit request of the human owner.
+
+---
+
+## Visual Core
+
+The Visual Core is the active work stream (Decision #011).
+
+The Phase 1 restrictions on visual work are lifted for it. The architecture boundaries remain in force: the Visual Core owns presentation only, never executes system actions and never contains environment-specific logic.
 
 ---
 
@@ -323,9 +348,17 @@ Claude does not redefine architecture.
 
 Role:
 
-SPECIALIST (Optional)
+SUPPORT INTELLIGENCE (Optional)
 
 Used only when specific capabilities are beneficial.
+
+---
+
+## Human owner
+
+Final approval of decisions and changes.
+
+Approves changes by merging them in the repository (Decision #008).
 
 ---
 

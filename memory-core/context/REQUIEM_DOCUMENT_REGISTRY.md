@@ -5,7 +5,7 @@ Version: 0.7
 Status: DRAFT
 
 
-Version 0.7 registers DOC-022 (section 8.6). This is a new registration under rule 5, not administrative metadata under rule 10, so version 0.7 requires human approval (rule 8) before this registry returns to APPROVED status. The approval records and approved status of DOC-017 … DOC-021 (sections 8.4, 8.5, 8.6) are unaffected: they describe those documents' own approval, not this registry's.
+Version 0.7 registers DOC-022 (section 8.6) and records the current versions of DOC-004 (0.6) and DOC-022 (0.5). This is a new registration under rule 5, not administrative metadata under rule 10, so version 0.7 requires human approval (rule 8) before this registry returns to APPROVED status. The approval records and approved status of DOC-017 … DOC-021 (sections 8.4, 8.5, 8.6) are unaffected: they describe those documents' own approval, not this registry's.
 
 
 ---
@@ -246,7 +246,7 @@ Creation dates are not recorded in the documents themselves.
 | DOC-001 | README.md | 0.5 | Reference | 3 | DRAFT | not applicable | System (contains a REQUIEM Application snapshot state block, see FD section 12) | none | synchronized at CP-006 |
 | DOC-002 | CHANGELOG.md | 0.5 | Reference | 0 | DRAFT | not applicable | Memory Core Development Project | none | synchronized at CP-006 |
 | DOC-003 | context/REQUIEM_CONTEXT.md | 0.6 | Reference | 0 | DRAFT | not applicable | mixed: Ecosystem, System, Memory Core Development Project (FD section 12) | none | synchronized at CP-006 |
-| DOC-004 | protocols/REQUIEM_DEVELOPMENT_PROTOCOL.md | 0.5 | Protocol | 3 | DRAFT | not applicable | Ecosystem; section 5: System | none | synchronized at CP-006 |
+| DOC-004 | protocols/REQUIEM_DEVELOPMENT_PROTOCOL.md | 0.6 | Protocol | 3 | DRAFT | not applicable | Ecosystem; section 5: System | none | synchronized at CP-006; 0.6: section 7 records the pause of Memory Core development (2026-09-27) |
 
 
 REQUIEM_CONTEXT.md summarizes rules defined by DEC records and the protocol. It does not define rules itself (Level 0).
@@ -379,7 +379,7 @@ The registry file with these approval records differs from the approved version 
 | ID | Document | Version | Category | Level | Status | Implementation | Knowledge level | Approval record |
 |---|---|---|---|---|---|---|---|---|
 | DOC-021 | context/REQUIEM_KNOWLEDGE_MODEL_SCOPE.md | 0.3 | Model | 1 | APPROVED | not implemented | System | version 0.3: approved by the human maintainer, 2026-09-25 |
-| DOC-022 | context/REQUIEM_KNOWLEDGE_MODEL.md | 0.1 | Model | 1 | DRAFT | not implemented | System | none |
+| DOC-022 | context/REQUIEM_KNOWLEDGE_MODEL.md | 0.5 | Model | 1 | DRAFT | not implemented | System | none |
 
 
 Relations:
@@ -390,6 +390,9 @@ Relations:
 
 
 DOC-022 is REQUIEM_KNOWLEDGE_MODEL.md, the document that will define Knowledge Model v1 (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 9: "Knowledge Model v1: DRAFT → REVIEW → APPROVED, together with the decisions of section 6").
+
+
+Work on DOC-022 is paused since 2026-09-27 at version 0.5, by decision of the human maintainer. Pausing does not change its status; the resume point is at the top of the document.
 
 
 ---

@@ -2,7 +2,7 @@
   "project": "REQUIEM",
   "current_phase": "Phase 1",
   "phase_status": "Architecture Preparation",
-  "current_focus": "Architecture map preparation and approval",
+  "current_focus": "Memory Core paused (2026-09-27). Last work: Knowledge Model v1, context/REQUIEM_KNOWLEDGE_MODEL.md version 0.5 (DRAFT).",
   "completed": [
     "Documentation foundation",
     "AI collaboration structure",
@@ -11,13 +11,14 @@
     "Comparison Layer v0.1",
     "Change Report Layer v0.1",
     "Context Update Layer v0.1",
-    "Analysis Layer v0.1"
+    "Analysis Layer v0.1",
+    "v0.7 Foundation approved (2026-09-24)",
+    "Knowledge Model Scope v0.3 approved (2026-09-25)"
   ],
-  "active_task": "Architecture map preparation and approval (direction only; the map is written and approved by a human, DEC-017)",
+  "active_task": "None. Memory Core development is paused by decision of the human maintainer. Resume point: top of context/REQUIEM_KNOWLEDGE_MODEL.md.",
   "next_actions": [
-    "Prepare the content of analysis/architecture_map.json (DRAFT)",
-    "Get human approval of the architecture map (status APPROVED, approval date)"
+    "When resumed: follow the resume point in context/REQUIEM_KNOWLEDGE_MODEL.md"
   ],
   "blockers": [],
-  "status": "ACTIVE"
+  "status": "PAUSED"
 }

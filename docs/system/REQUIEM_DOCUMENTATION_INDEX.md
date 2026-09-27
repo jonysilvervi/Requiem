@@ -1,6 +1,6 @@
 # REQUIEM DOCUMENTATION INDEX
 
-Version: 1.0
+Version: 1.1
 
 Purpose:
 Define the structure and navigation of REQUIEM documentation.
@@ -9,50 +9,15 @@ Define the structure and navigation of REQUIEM documentation.
 
 # DOCUMENTATION HIERARCHY
 
-REQUIEM documentation is divided into:
+All documentation lives in the repository jonysilvervi/Requiem (Decision #008):
 
-1. SYSTEM
-2. AI
-3. PROJECTS
-
----
-
-# SYSTEM
-
-Purpose:
-Meta-information about documentation itself.
-
-Contains:
-
-- documentation navigation;
-- decisions;
-- historical changes.
-
----
-
-# AI
-
-Purpose:
-Define how AI systems cooperate with REQUIEM.
-
-Contains:
-
-- AI roles;
-- workflows;
-- automation concepts.
-
----
-
-# PROJECTS
-
-Purpose:
-Describe REQUIEM itself.
-
-Contains:
-
-- current state;
-- architecture;
-- phase documentation.
+| Folder | Content |
+|---|---|
+| docs/system/ | documentation navigation, decisions, history, active session |
+| docs/ai/ | AI roles, workflows, automation concepts |
+| docs/app/ | REQUIEM Application: current state, phase documents |
+| memory-core/ | Memory Core system, its documents and data |
+| docs/memory-core-legacy/ | superseded Memory Core v0.1 concept documents (history only) |
 
 ---
 
@@ -60,11 +25,13 @@ Contains:
 
 Before working:
 
-1. REQUIEM_AI_MASTER_CONTEXT.md
-2. REQUIEM_AI_SESSION_PROTOCOL.md
-3. REQUIEM_CURRENT_STATE_SNAPSHOT.md
-4. Relevant architecture documents
-5. Task-specific documentation
+1. README.md (repository root)
+2. docs/system/REQUIEM_ACTIVE_SESSION.md
+3. REQUIEM_AI_MASTER_CONTEXT.md
+4. REQUIEM_AI_SESSION_PROTOCOL.md
+5. REQUIEM_CURRENT_STATE_SNAPSHOT.md
+6. Relevant architecture documents
+7. Task-specific documentation
 
 ---
 

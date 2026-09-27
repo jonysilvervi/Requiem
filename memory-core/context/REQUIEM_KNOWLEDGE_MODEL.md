@@ -1,11 +1,22 @@
 # REQUIEM KNOWLEDGE MODEL
 
-Version: 0.4
+Version: 0.5
 
 Status: DRAFT
 
 
 Coverage: sections 1–8 (Purpose, Scope compliance, Principles, Knowledge Element definition, Ownership, Evidence and Provenance, Lifecycle, Terms introduced by this document). Section 8 registers only the two terms already used by sections 1–7; it does not yet mirror REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 11, in full. Remaining REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4 responsibilities, and this document's own remaining outer sections, are not yet written; see section 2.
+
+
+Work state: PAUSED since 2026-09-27 by decision of the human maintainer. Work on this document stops at version 0.5 and resumes from the resume point below. Pausing does not change the status of this document (DRAFT) or of any other document.
+
+
+Resume point, in order:
+
+1. Decide whether DEPRECATED is terminal for a Knowledge Element (section 2.3, "Status after DEPRECATED").
+2. Prepare new versions of REQUIEM_FOUNDATION_DECISIONS.md, REQUIEM_GLOSSARY.md and REQUIEM_KNOWLEDGE_MODEL_SCOPE.md that apply the decision recorded in section 2.3 ("Knowledge Element lifecycle boundary"), for human approval; then apply it in sections 7.1, 7.2 and 7.4 of this document.
+3. Write the remaining REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4 responsibilities (4.4, 4.5, 4.6, 4.9, 4.10, 4.11, 4.12, 4.13) and the remaining outer sections listed in section 2.2.
+4. Complete section 8 and the Glossary updates it requires; then move this document to REVIEW.
 
 
 ---
@@ -36,7 +47,7 @@ Basis:
 Like REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, this document is a logical model. It does not define storage, does not implement anything, and does not change CP-006 (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 2; REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 5).
 
 
-This is version 0.4, a corrective revision of version 0.3. It corrects the description of open item O7 in section 2.3 and the source cited for preservation of history in section 3 ("Controlled evolution"), as found by the v0.3 audit. It changes no decision of version 0.3 and adds no new section. Version 0.3 applied the confirmed architectural decision of 2026-09-25 that knowledge status belongs to a Knowledge Element, not to a Revision (section 7.1), and recorded the questions the approved documents do not decide as known issues (section 2.3) instead of resolving them. This document does not yet cover every responsibility REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4, assigns to Knowledge Model v1; section 2 below lists what is covered and what remains.
+This is version 0.5. It records the human decision of 2026-09-27 on the Knowledge Element lifecycle boundary (section 2.3) without yet applying it, because applying it changes approved documents; it updates the references to that boundary in sections 7.1 and 7.2 accordingly; it corrects the heading of the table in section 2.2; and it records that work on this document is paused, with a resume point. It adds no new numbered section and changes no other decision. Version 0.4 was a corrective revision of version 0.3. It corrected the description of open item O7 in section 2.3 and the source cited for preservation of history in section 3 ("Controlled evolution"), as found by the v0.3 audit. It changes no decision of version 0.3 and adds no new section. Version 0.3 applied the confirmed architectural decision of 2026-09-25 that knowledge status belongs to a Knowledge Element, not to a Revision (section 7.1), and recorded the questions the approved documents do not decide as known issues (section 2.3) instead of resolving them. This document does not yet cover every responsibility REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4, assigns to Knowledge Model v1; section 2 below lists what is covered and what remains.
 
 
 ---
@@ -68,7 +79,7 @@ This section records how this version of Knowledge Model v1 complies with REQUIE
 ## 2.2 REQUIEM_KNOWLEDGE_MODEL_SCOPE.md section 4 responsibilities covered by this version
 
 
-| Scope section | Responsibility | Status in v0.3 |
+| Scope section | Responsibility | Status in v0.5 |
 |---|---|---|
 | 4.1 | Facts | addressed (section 4, by reference: a Knowledge Element is not a Fact) |
 | 4.2 | Evidence | partially addressed (section 6 defines what evidence is and the rules for its use; which evidence a Knowledge Proposal requires is not yet defined) |
@@ -129,7 +140,16 @@ Until this document reaches REVIEW and then APPROVED (REQUIEM_DOCUMENT_REGISTRY.
 Known issues recorded by this version and not resolved by it. REQUIEM_GLOSSARY.md and REQUIEM_KNOWLEDGE_MODEL_SCOPE.md are not modified by this document.
 
 
-- Knowledge Element lifecycle boundary. The approved documents do not decide at which point a proposal item becomes a Knowledge Element, and whether and when it produces a Revision. REQUIEM_GLOSSARY.md, section 9, defines PROPOSED as "knowledge element suggested, not yet reviewed", and REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.11, requires a rule for how Analysis shows PROPOSED knowledge; both presuppose Knowledge Elements that exist before human review. REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9, states that "a rejected proposal item does not become a knowledge element", and the knowledge statuses include no rejected state (FD-B2). The same boundary applies to a change proposed for an existing Knowledge Element: whether a Revision exists before human review, and what the knowledge status of the Knowledge Element is while that change is under review, is not decided. The boundary belongs to REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9 (Proposal lifecycle), and requires a human decision.
+- Knowledge Element lifecycle boundary. DECIDED by the human maintainer on 2026-09-27; NOT YET APPLIED (see the decision at the end of this item). The approved documents do not decide at which point a proposal item becomes a Knowledge Element, and whether and when it produces a Revision. REQUIEM_GLOSSARY.md, section 9, defines PROPOSED as "knowledge element suggested, not yet reviewed", and REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.11, requires a rule for how Analysis shows PROPOSED knowledge; both presuppose Knowledge Elements that exist before human review. REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9, states that "a rejected proposal item does not become a knowledge element", and the knowledge statuses include no rejected state (FD-B2). The same boundary applies to a change proposed for an existing Knowledge Element: whether a Revision exists before human review, and what the knowledge status of the Knowledge Element is while that change is under review, is not decided. The boundary belongs to REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9 (Proposal lifecycle), and requires a human decision.
+
+  Decision (2026-09-27, human maintainer): "Proposal first, Knowledge only after human approval".
+  - Until human review, only a Knowledge Proposal and its proposal items exist. A proposal item is not a Knowledge Element and produces no Revision.
+  - A new Knowledge Element, with its first Revision, is created only when a proposal item is approved by human review.
+  - A change to an existing Knowledge Element produces a new Revision only when it is approved. Until then the Knowledge Element keeps its current Revision and status.
+  - A rejected proposal item creates no Knowledge Element and no Revision; it remains in the history of its Knowledge Proposal.
+  - Direction for applying the decision, to be reviewed by the Architect when the approved documents are changed: PROPOSED stops being a status of a Knowledge Element and becomes a status of a Knowledge Proposal item. This follows FD-B2 ("A status word is always read together with its object type"), where context update proposals (CU) already use PROPOSED as a proposal status. Knowledge Proposals remain separate from CU (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9). The knowledge statuses of a Knowledge Element become TRUSTED → DEPRECATED. Analysis may show pending proposal items only as proposals, marked with their source, never as knowledge (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.11).
+
+  Why it is not yet applied: applying it changes three approved documents: the knowledge element statuses of FD-B2 (REQUIEM_FOUNDATION_DECISIONS.md, section 4); the definition of PROPOSED (REQUIEM_GLOSSARY.md, section 9); the knowledge statuses (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.8) and the display of PROPOSED knowledge (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.11). A DRAFT document cannot change approved documents (REQUIEM_DOCUMENT_REGISTRY.md, section 10, rules 1–3). Until new versions of those documents are approved, sections 7.1 and 7.2 of this document keep the statuses defined by FD-B2.
 
 - Status after DEPRECATED. Whether DEPRECATED is terminal for a Knowledge Element, or a DEPRECATED Knowledge Element can receive a new Revision and return to use, is not decided by the approved documents. It belongs to REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.12 (Replacement and conflict handling), and requires a human decision.
 
@@ -362,7 +382,7 @@ Knowledge statuses (FD-B2; REQUIEM_GLOSSARY.md, section 9):
 PROPOSED → TRUSTED → DEPRECATED
 
 
-- PROPOSED — a Knowledge Element suggested, not yet reviewed (REQUIEM_GLOSSARY.md, section 9). At which point a proposal item becomes a PROPOSED Knowledge Element is not decided (section 2.3).
+- PROPOSED — a Knowledge Element suggested, not yet reviewed (REQUIEM_GLOSSARY.md, section 9). The point at which a proposal item becomes a Knowledge Element is decided but not yet applied (section 2.3).
 
 - TRUSTED — a Knowledge Element accepted by human review; it passed human review and can be used as a reliable source (REQUIEM_GLOSSARY.md, "Trusted Knowledge").
 
@@ -378,7 +398,7 @@ Knowledge Elements and their Revisions do not use APPROVED or SUPERSEDED. Those 
 Knowledge status of a Knowledge Element:
 
 
-- The point at which a proposal item becomes a Knowledge Element with status PROPOSED is not decided by this version (section 2.3; REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9).
+- The point at which a proposal item becomes a Knowledge Element is decided but not yet applied by this version (section 2.3; REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9).
 
 - A Knowledge Element becomes TRUSTED only through human review, with evidence and Provenance complete (section 6.2; REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.8; REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 8). Only a human can make a Knowledge Element TRUSTED (REQUIEM_GLOSSARY.md, "Trusted Knowledge").
 
@@ -400,7 +420,7 @@ Revision lifecycle (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.8):
 
 - A Revision has no knowledge status of its own (section 7.1).
 
-- At which point of a Knowledge Proposal a Revision is created is not decided by this version (section 2.3; REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9).
+- At which point of a Knowledge Proposal a Revision is created is decided but not yet applied by this version (section 2.3; REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 4.9).
 
 
 ## 7.3 Preservation
@@ -446,4 +466,4 @@ REQUIEM_GLOSSARY.md v0.4 already has a "Revision" entry: "a numbered version of 
 
 ---
 
-END OF v0.4 — PARTIAL (sections 1–8 of Knowledge Model v1; see section 2.2 for what remains)
+END OF v0.5 — PARTIAL, PAUSED (sections 1–8 of Knowledge Model v1; see section 2.2 for what remains and the resume point at the top of this document)

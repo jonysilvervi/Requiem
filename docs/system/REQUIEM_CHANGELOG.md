@@ -1,6 +1,6 @@
 # REQUIEM CHANGELOG
 
-Version: 1.0
+Version: 1.1
 
 Document Type:
 Project Change History
@@ -169,6 +169,76 @@ Phase 1 documentation is synchronized and ready for implementation.
 Next stage:
 
 Physical Core Skeleton structure creation.
+
+---
+
+# 2026-09-24
+
+# Memory Core implemented up to checkpoint CP-006
+
+Completed (memory-core/database/checkpoints.json):
+
+- CP-002 Memory Core Foundation Created;
+- CP-003 Snapshot System v0.1 Complete;
+- CP-004 Comparison Layer v0.1 Complete;
+- CP-005 Change Report and Context Update v0.1 Complete;
+- CP-006 Analysis Layer v0.1 Complete.
+
+Details: memory-core/CHANGELOG.md.
+
+---
+
+# v0.7 Foundation approved
+
+Approved by the human maintainer (memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md, section 8.4):
+
+- REQUIEM_GLOSSARY.md v0.3;
+- REQUIEM_DOCUMENT_REGISTRY.md v0.4;
+- REQUIEM_INSTANCE_MODEL.md v0.3;
+- REQUIEM_FOUNDATION_DECISIONS.md v0.4 (FD-B1 … FD-B8).
+
+---
+
+# 2026-09-25
+
+# Knowledge Model Scope approved
+
+Approved (memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md, sections 8.5 and 8.6):
+
+- REQUIEM_GLOSSARY.md v0.4;
+- REQUIEM_DOCUMENT_REGISTRY.md v0.6;
+- REQUIEM_KNOWLEDGE_MODEL_SCOPE.md v0.3.
+
+Work on REQUIEM_KNOWLEDGE_MODEL.md (Knowledge Model v1, DOC-022) started.
+
+---
+
+# 2026-09-27
+
+# Repository created
+
+All documentation moved into the GitHub repository jonysilvervi/Requiem (Decision #008):
+
+- memory-core/ — Memory Core system and its documents;
+- docs/ai/, docs/system/ — ecosystem documentation;
+- docs/app/ — REQUIEM Application documents;
+- docs/memory-core-legacy/ — superseded Memory Core v0.1 concept documents.
+
+---
+
+# Memory Core paused
+
+REQUIEM_KNOWLEDGE_MODEL.md reached version 0.5 (DRAFT). The human decision on the Knowledge Element lifecycle boundary is recorded in it; applying it is part of the resume point.
+
+Memory Core development paused (Decision #009).
+
+---
+
+# Active work stream changed
+
+Frozen: Execution Engine (PowerShell), new architecture documentation (Decision #010).
+
+Active: REQUIEM Visual Core (Decision #011).
 
 ---
 
