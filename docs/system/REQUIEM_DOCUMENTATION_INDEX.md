@@ -13,7 +13,7 @@ All documentation lives in the repository jonysilvervi/Requiem (Decision #008):
 
 | Folder | Content |
 |---|---|
-| docs/system/ | documentation navigation, decisions, history, active session |
+| docs/system/ | documentation navigation, decisions, history, active session, ecosystem roadmap |
 | docs/ai/ | AI roles, workflows, automation concepts |
 | docs/app/ | REQUIEM Application: current state, phase documents |
 | memory-core/ | Memory Core system, its documents and data |
