@@ -44,19 +44,21 @@ REQUIEM Visual Core (Decision #011).
 - REQUIEM Application documents checked against the code: Phase 1 skeleton exists, build works; REQUIEM_CURRENT_STATE_SNAPSHOT.md v0.3, docs/app/NOTES.md.
 - Application code put under git: repository jonysilvervi/requiem-tauri.
 - Phase 1 stays open until the foundation is polished (Decision #012).
+- R0 migration plan accepted, option A (Decision #013, docs/app/R0_MIGRATION_PLAN.md).
 
 ---
 
 # NEXT ACTIONS
 
-1. First Visual Core task: decide with the Architect how the R0 prototype (src/App.jsx, src/index.css) is carried into the new structure (docs/app/NOTES.md, finding 1).
-2. Owner: say where the PowerShell Execution Engine code lives (docs/app/NOTES.md, finding 6).
+1. GPT writes the task specification for step 1 of docs/app/R0_MIGRATION_PLAN.md (L0 SHELL + theme + color tokens).
+2. Claude executes it in a new session, working in jonysilvervi/requiem-tauri; the owner checks the result with npm run tauri dev.
+3. Owner: say where the PowerShell Execution Engine code lives (docs/app/NOTES.md, finding 6).
 
 ---
 
 # OPEN QUESTIONS
 
-- How the R0 visual prototype is carried into the new structure (docs/app/NOTES.md, finding 1).
+- Which values are the reference for the four calibrated colors (docs/app/R0_MIGRATION_PLAN.md, step 1) — set by the step 1 specification.
 - Location of the PowerShell Execution Engine code (docs/app/NOTES.md, finding 6).
 
 ---

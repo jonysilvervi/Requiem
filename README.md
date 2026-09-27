@@ -39,7 +39,7 @@ Decisions: `docs/system/REQUIEM_DECISION_LOG.md`.
 | `memory-core/` | The Memory Core system itself: its architecture, data model, protocols and the actual document set (Foundation Decisions, Glossary, Knowledge Model, Document Registry, etc.), plus its scanner/analyzer code and database. | **Current source of truth.** Document status is defined by `memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md`, not by the "Status:" line inside each file. |
 | `docs/ai/` | AI role definitions: GPT (Architect), Claude (Executor), Gemini (Support), and the shared workflow/session/documentation rules. | Current. |
 | `docs/system/` | Ecosystem-level history: decision log, changelog, documentation index, start-here guide. | Current as a historical record. |
-| `docs/app/` | REQUIEM Application (the Tauri desktop app) — current state snapshot and Phase 1 planning docs. The code itself is in the separate repository `jonysilvervi/requiem-tauri`. | Verified against the code on 2026-09-27 (`src`; `src-tauri` not yet checked). Open findings: `docs/app/NOTES.md`. |
+| `docs/app/` | REQUIEM Application (the Tauri desktop app) — current state snapshot and Phase 1 planning docs. The code itself is in the separate repository `jonysilvervi/requiem-tauri`. | Verified against the code on 2026-09-27 (including `src-tauri`). Open findings: `docs/app/NOTES.md`. Visual Core migration plan: `docs/app/R0_MIGRATION_PLAN.md`. |
 | `docs/memory-core-legacy/` | The original v0.1 concept documents for Memory Core (Constitution, MVP, early Architecture/Protocols/Schemas/Roadmap). | **Superseded by `memory-core/context/`. Kept for history only — do not use as current reference.** |
 
 ## Reading order for a new session (human or AI)

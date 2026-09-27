@@ -400,6 +400,36 @@ Visual Core work (Decision #011) happens inside Phase 1.
 
 ---
 
+# DECISION #013
+
+## Topic
+
+Carrying the R0 visual prototype into the Phase 1 structure.
+
+---
+
+## Decision
+
+R0 (src/App.jsx and src/index.css in jonysilvervi/requiem-tauri) is carried into the Phase 1 structure layer by layer, following docs/app/R0_MIGRATION_PLAN.md. It is not reconnected as a whole.
+
+Carried: the spatial model L0 SHELL, L1 NAVIGATION, L2 WORKSPACE, L3 INTELLIGENCE (presentation surface only), L4 SYSTEM, and the visual language.
+
+Not carried: chat state and fake replies, assistant modes and the Companion / Operator / Ambient personas, the Dev Panel, and any data or command that pretends to control systems. The Dev Panel values are fixed in CSS.
+
+---
+
+## Reason
+
+These concepts were removed in Phase 0 (REQUIEM_CURRENT_STATE_SNAPSHOT.md, section 6), and intelligence is not a chat widget (Decision #011). A temporary imitation would have to be removed again when real intelligence arrives.
+
+---
+
+## Impact
+
+The visual work of R0 is kept. Styles for removed mechanisms stay in src/index.css until the cleanup step and remain in git history afterwards.
+
+---
+
 # FUTURE DECISIONS
 
 Future important decisions should be added using this format:
