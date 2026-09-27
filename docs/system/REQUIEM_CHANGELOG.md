@@ -250,6 +250,8 @@ Application code put into the repository jonysilvervi/requiem-tauri. Application
 
 Phase 1 stays open until the foundation is polished (Decision #012).
 
+R0 migration plan accepted (Decision #013, docs/app/R0_MIGRATION_PLAN.md).
+
 ---
 
 # FUTURE ENTRIES

@@ -27,7 +27,8 @@ rewritten to match the result.
    R0 levels. According to the owner, the visual work before the documentation phase was done in
    `src/App.jsx` and `src/index.css`. `src/main.jsx` renders the new skeleton (`AppRoot`) since
    2026-09-22, so changes made to `src/App.jsx` after that date do not appear on screen.
-   `src/index.css` is still loaded. Open: how R0 is carried into the new structure.
+   `src/index.css` is still loaded. Decided: R0 is carried layer by layer, see
+   `R0_MIGRATION_PLAN.md` (Decision #013).
 2. **Legacy dependencies are back.** `package.json` lists `@tauri-apps/plugin-opener`, `clsx`,
    `tailwind-merge`, which the Phase 0 snapshot records as removed.
 3. **Leftovers:** `src/assets/react.svg` (template), empty `src/App.css`, and a stray empty
