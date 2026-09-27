@@ -37,7 +37,10 @@ REQUIEM Visual Core (Decision #011).
 
 # COMPLETED THIS SESSION
 
-- [TASK-001] / [STEP-R0-01] implemented by Claude Code in `requiem-tauri`: branch `visual-core/r0-step1-l0-shell`, commit `6b02445`. L0 window chrome (drag region, minimize, maximize/restore, close) moved into `src/app/shell/ShellChrome.jsx`; default theme set statically to dark in `index.html`; the four calibrated color tokens fixed in `src/index.css` for dark and light. `npm run build` succeeded. Branch is NOT merged into `main`. Owner manual validation (drag, buttons, minimize/maximize/close, dark default, placeholder) is still pending; GPT report review is still pending.
+- [TASK-001] / [STEP-R0-01] implemented by Claude Code in `requiem-tauri`: branch `visual-core/r0-step1-l0-shell`, commit `6b02445`. L0 window chrome (drag region, minimize, maximize/restore, close) moved into `src/app/shell/ShellChrome.jsx`; default theme set statically to dark in `index.html`; the four calibrated color tokens fixed in `src/index.css` for dark and light. `npm run build` succeeded. Branch is NOT merged into `main`.
+- Owner performed manual validation of [TASK-001] on 2026-09-27 (`npm run tauri dev`, checklist in TASK-001 section "B"). Passed: drag, buttons excluded from drag, minimize, maximize/restore, close, `REQUIEM VISUAL CORE` placeholder, no Command Palette/theme-toggle controls, button hover visuals (close hover confirmed red). Did NOT pass: dark theme is not visible immediately — the window shows a white flash for about a second before the calibrated dark colors paint. Logged as [ISS-008] (docs/app/NOTES.md, finding 8); root cause is the native window (`src-tauri/tauri.conf.json`, `"transparent": true`, no background color) being shown before WebView2's first paint, not the static `data-theme` itself. Owner decision: do not fix inside TASK-001; two candidate fixes are recorded in ISS-008, both requiring changes to the frozen `src-tauri` (Decision #010).
+- Additional observation from validation: after clicking Maximize/Restore, a blue keyboard-focus outline (existing R0 `:focus-visible` rule in `src/index.css`) remains visible around the button. Not fixed, not filed as a separate ISS — recorded as an observation in TASK-001's passport.
+- [TASK-001] Object Status updated to AWAITING CHECK in REQUIEM_DOCUMENTATION_INDEX.md. Owner "OK" and GPT report review are still pending before merge into `main`.
 - Documentation moved into the repository jonysilvervi/Requiem (Decision #008).
 - Memory Core put into a clean pause: Knowledge Model v0.5 with the recorded boundary decision and a resume point; development protocol, state and registry updated.
 - Ecosystem documentation brought up to date: Decision Log, Changelog, this file, reading order.
@@ -59,8 +62,8 @@ REQUIEM Visual Core (Decision #011).
 
 # NEXT ACTIONS
 
-1. Owner: manually validate branch `visual-core/r0-step1-l0-shell` (commit `6b02445`) with `npm run tauri dev` against the checklist in TASK-001 section "B. Human owner checks manually" (drag, buttons excluded from drag, minimize, maximize/restore, close, dark default, `REQUIEM VISUAL CORE` placeholder, button hover visuals, no palette/theme controls yet).
-2. Owner forwards Claude's report on [TASK-001] to GPT for review.
+1. Owner forwards Claude's final report on [TASK-001] to GPT for review, including [ISS-008] (white flash before dark theme paints) and the unfiled Maximize/Restore focus-outline observation.
+2. Owner and GPT decide how to handle [ISS-008]: fix now via a separate task against the frozen `src-tauri` (requires explicitly unfreezing that file for the fix), or accept and defer.
 3. After owner says "OK" and GPT review, merge `visual-core/r0-step1-l0-shell` into `main`; then plan [STEP-R0-02] (L1 NAVIGATION).
 4. Owner: answer [Q-001] — where the PowerShell Execution Engine code lives.
 

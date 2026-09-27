@@ -44,3 +44,14 @@ rewritten to match the result.
 7. **Before the bridge is used for real:** `run_core_bridge` inserts `action` into the PowerShell
    command text without escaping. A value containing a quote would change the command. This
    must be fixed before any real input reaches it (the engine is frozen, Decision #010).
+8. **The native window flashes white for about a second before the static dark theme paints.**
+   Found during TASK-001 / STEP-R0-01 owner manual validation on 2026-09-27 (`npm run tauri dev`).
+   `index.html` sets `data-theme="dark"` statically, but that only controls what CSS renders once
+   the page paints; it cannot pre-empt the native window itself. `src-tauri/tauri.conf.json` sets
+   `"transparent": true` on the window with no explicit background color, so the window is shown
+   before WebView2 finishes loading and painting `index.html`, and the blank/white WebView2
+   surface is visible until first paint completes. Two candidate fixes, neither implemented
+   (both touch the frozen `src-tauri`, Decision #010, and TASK-001 explicitly forbids editing
+   `tauri.conf.json`): (a) set an explicit dark `backgroundColor` on the window in
+   `src-tauri/tauri.conf.json`; (b) create the window hidden (`"visible": false`) and show it from
+   `src-tauri/src/lib.rs` only after the frontend signals it has rendered.

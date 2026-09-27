@@ -3,7 +3,7 @@
 ID: TASK-001
 Type: Task Specification
 Document Status: DRAFT
-Object Status: SPECIFIED
+Object Status: AWAITING CHECK
 Area: AREA-VC
 Updated: 2026-09-27
 
@@ -11,6 +11,8 @@ Related: [STEP-R0-01] (docs/app/R0_MIGRATION_PLAN.md, section Steps, step 1), [E
 
 Prepared by GPT (Architect) on 2026-09-27. Checked against the code by Claude (Executor) on 2026-09-27: all file and line references, CSS class names, Tauri configuration and permissions, and the eight calibrated color values match `jonysilvervi/requiem-tauri` at commit `ec43d4a`.
 Accepted by the owner as the next implementation task. The reference for the four calibrated colors (R0 values with all four Dev Panel sliders at their default 1.00) was decided by the owner.
+
+Implemented by Claude on 2026-09-27 on branch `visual-core/r0-step1-l0-shell` (commit `6b02445`), not merged. Owner manual validation on the same day passed checks 1-5, 7-9 of section "B. Human owner checks manually"; check 6 (dark default with no flash) did NOT pass -- logged as [ISS-008]. Owner decision: do not fix within this task. Observation: a blue keyboard-focus outline (existing R0 `:focus-visible` rule) remains visible around the Maximize/Restore control after it is clicked. Awaiting owner "OK" and GPT report review before merge.
 
 Executor: Claude in Claude Code, on the owner's PC, in the local `requiem-tauri` folder.
 

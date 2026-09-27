@@ -180,7 +180,7 @@ Source: docs/system/REQUIEM_DECISION_LOG.md. Not related to Memory Core `DEC-` r
 
 | ID | Object | Area | Status | Related | Source | Specification |
 |---|---|---|---|---|---|---|
-| TASK-001 | R0 migration step 1 — L0 SHELL + static dark theme + calibrated color tokens | AREA-VC | SPECIFIED | STEP-R0-01 | docs/app/R0_MIGRATION_PLAN.md, section Steps, step 1 | docs/app/tasks/TASK-001_R0_STEP1_L0_SHELL.md |
+| TASK-001 | R0 migration step 1 — L0 SHELL + static dark theme + calibrated color tokens | AREA-VC | AWAITING CHECK | STEP-R0-01 | docs/app/R0_MIGRATION_PLAN.md, section Steps, step 1 | docs/app/tasks/TASK-001_R0_STEP1_L0_SHELL.md |
 
 ## STEP
 
@@ -203,7 +203,7 @@ Source: docs/app/R0_MIGRATION_PLAN.md, section Steps.
 
 ## ISS
 
-Source: docs/app/NOTES.md, section "Open findings for the owner", findings 1–7.
+Source: docs/app/NOTES.md, section "Open findings for the owner", findings 1–8.
 
 | ID | Object | Finding | Related |
 |---|---|---|---|
@@ -214,6 +214,7 @@ Source: docs/app/NOTES.md, section "Open findings for the owner", findings 1–7
 | ISS-005 | Implementation Plan references the old Core Skeleton spec version | 5 | |
 | ISS-006 | PowerShell bridge is a stub; the real Execution Engine location is open | 6 | Q-001 |
 | ISS-007 | PowerShell bridge inserts action input without escaping; must be fixed before real input is used | 7 | |
+| ISS-008 | Native window flashes white for about a second before the static dark theme paints (transparent window with no background color, shown before WebView2 first paint) | 8 | TASK-001 |
 
 ---
 
