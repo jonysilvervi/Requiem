@@ -372,6 +372,34 @@ Visual tasks are reviewed against the architecture boundaries above, not against
 
 ---
 
+# DECISION #012
+
+## Topic
+
+Phase 1 stays open.
+
+---
+
+## Decision
+
+Phase 1 (Core Skeleton) is not closed, although its success criteria are met in code (docs/app/REQUIEM_CURRENT_STATE_SNAPSHOT.md, section 9).
+
+The foundation is polished to real quality first. Phase 1 is closed by a separate decision of the human owner.
+
+---
+
+## Reason
+
+The owner's standard: everything that can be brought to real quality is brought to it before the phase is closed.
+
+---
+
+## Impact
+
+Visual Core work (Decision #011) happens inside Phase 1.
+
+---
+
 # FUTURE DECISIONS
 
 Future important decisions should be added using this format:
