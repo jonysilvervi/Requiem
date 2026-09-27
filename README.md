@@ -40,6 +40,7 @@ Decisions: `docs/system/REQUIEM_DECISION_LOG.md`.
 | `docs/ai/` | AI role definitions: GPT (Architect), Claude (Executor), Gemini (Support), and the shared workflow/session/documentation rules. | Current. |
 | `docs/system/` | Ecosystem-level history: decision log, changelog, documentation index, start-here guide. | Current as a historical record. |
 | `docs/app/` | REQUIEM Application (the Tauri desktop app) — current state snapshot and Phase 1 planning docs. The code itself is in the separate repository `jonysilvervi/requiem-tauri`. | Verified against the code on 2026-09-27 (including `src-tauri`). Open findings: `docs/app/NOTES.md`. Visual Core migration plan: `docs/app/R0_MIGRATION_PLAN.md`. |
+| `tools/` | Helper scripts (citation checker for the Knowledge Model). | Current. |
 | `docs/memory-core-legacy/` | The original v0.1 concept documents for Memory Core (Constitution, MVP, early Architecture/Protocols/Schemas/Roadmap). | **Superseded by `memory-core/context/`. Kept for history only — do not use as current reference.** |
 
 ## Reading order for a new session (human or AI)
