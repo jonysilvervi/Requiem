@@ -254,6 +254,12 @@ R0 migration plan accepted (Decision #013, docs/app/R0_MIGRATION_PLAN.md).
 
 ---
 
+# Information standard
+
+Decision #014 [ED-014]: REQUIEM information standard with stable identifiers AREA-, ED-, TASK-, STEP-, Q-, ISS-. The standard and the registry of allocated identifiers live in docs/system/REQUIEM_DOCUMENTATION_INDEX.md. Existing identifier systems are preserved unchanged.
+
+---
+
 # FUTURE ENTRIES
 
 Future changes should include:

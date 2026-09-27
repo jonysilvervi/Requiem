@@ -430,6 +430,105 @@ The visual work of R0 is kept. Styles for removed mechanisms stay in src/index.c
 
 ---
 
+# DECISION #014
+
+## Topic
+
+REQUIEM information standard and stable operational identifiers.
+
+---
+
+## Decision
+
+REQUIEM uses a single operational information standard for stable references across ecosystem documentation.
+
+The standard introduces these identifier namespaces:
+
+- `AREA-` — administrative tracking areas;
+- `ED-` — ecosystem decisions recorded in `docs/system/REQUIEM_DECISION_LOG.md`;
+- `TASK-` — implementation or documentation tasks;
+- `STEP-` — stable steps of an accepted plan;
+- `Q-` — tracked questions;
+- `ISS-` — tracked issues or findings.
+
+An allocated identifier is permanent and is never reused, even if the object is completed, rejected, resolved, superseded or no longer active.
+
+`ED-NNN` is the stable identifier of `Decision #NNN` in the ecosystem Decision Log. Therefore `ED-014` identifies this decision.
+
+The `ED-` namespace is independent from the existing Memory Core `DEC-` namespace. For example, `ED-013` means ecosystem Decision #013, while `DEC-013` remains the existing Memory Core decision record. They are different identifiers for different objects.
+
+`AREA-` is an administrative tracking classification. It does not define a new architectural object type, does not redefine Projects, REQUIEM Engine, Tools or Memory Core, and does not resolve the open Project ID or REQUIEM Engine scope questions.
+
+Existing identifier systems are preserved unchanged:
+
+`DEC-`, `DOC-`, `FD-B`, `CP-`, `CHG-`, `SNAP-`, `CU-`, `ANL-`, `EVENT-`, and existing open-item identifiers `O1` through `O7`.
+
+They are not renamed or migrated into the new namespaces.
+
+Area lifecycle statuses are:
+
+`ACTIVE`, `FROZEN`, `PAUSED`, `PLANNED`, `DONE`.
+
+Task lifecycle statuses are:
+
+`PROPOSED`, `SPECIFIED`, `IN PROGRESS`, `AWAITING CHECK`, `DONE`, `REJECTED`.
+
+Document statuses remain defined by `memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md`. Document status and the lifecycle status of an object described by a document are separate properties and must not be conflated.
+
+Every new standalone documentation file created after this decision uses a header passport containing:
+
+- `ID`;
+- `Type`;
+- `Document Status`;
+- `Area`;
+- `Updated`.
+
+If the document represents an object with its own lifecycle, the passport also contains `Object Status`.
+
+When a file is a container or reference document rather than an object represented by `AREA-`, `ED-`, `TASK-`, `STEP-`, `Q-` or `ISS-`, its passport uses `ID: N/A`. An unrelated identifier must never be invented only to fill the passport.
+
+Reference format is standardized as follows:
+
+- documentation: `FILE.md, section N`;
+- application code: `requiem-tauri: path/to/file, line N`;
+- stable tracked objects: `[ED-014]`, `[TASK-001]`, `[Q-001]`, etc.
+
+The canonical definition of this information standard and the canonical registry of allocated `AREA-`, `ED-`, `TASK-`, `STEP-`, `Q-` and `ISS-` identifiers live in:
+
+`docs/system/REQUIEM_DOCUMENTATION_INDEX.md`.
+
+The identifier registry records allocation and identity. It does not replace the source document that owns an object's detailed state.
+
+---
+
+## Reason
+
+REQUIEM already contains several independent identifier and status systems. Without an ecosystem-level reference convention, similar numbers and status words can refer to different object types.
+
+Stable typed identifiers make decisions, tasks, plan steps, questions, findings and roadmap entries unambiguous without renaming existing records or changing the established architecture.
+
+Keeping the standard inside an existing system documentation document avoids creating a new architecture document while architecture documentation is frozen.
+
+Separating document status from object lifecycle status preserves the existing rule that different object types use different status systems.
+
+---
+
+## Impact
+
+Future ecosystem documentation uses the new identifiers when the corresponding tracked objects are created.
+
+Allocated identifiers are registered before reuse could become ambiguous and are never reassigned.
+
+Existing documentation is not bulk-renamed or rewritten solely to add identifiers.
+
+Existing Memory Core identifiers and workflows remain unchanged.
+
+`docs/system/REQUIEM_DOCUMENTATION_INDEX.md` becomes the source of truth for the new information standard and its allocated-ID registry.
+
+Future roadmap entries may reference `AREA-`, `ED-`, `TASK-`, `STEP-`, `Q-` and `ISS-` identifiers without redefining their meaning.
+
+---
+
 # FUTURE DECISIONS
 
 Future important decisions should be added using this format:
