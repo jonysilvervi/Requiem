@@ -1,6 +1,6 @@
 # REQUIEM AI WORKFLOW
 
-Version: 1.0 Draft
+Version: 1.1 Draft
 
 Document Type:
 AI Collaboration Workflow
@@ -182,6 +182,24 @@ Documentation has priority over assumptions.
 If code and documentation disagree:
 
 The discrepancy must be analyzed before changes are made.
+
+---
+
+# 8. PRACTICAL WORKING CYCLE
+
+How the flow of section 3 runs in practice since 2026-09-27 (repository, Claude Code, owner checks).
+
+1. Idea or request — the owner.
+2. Analysis — GPT: options and a separate recommendation. The owner decides. Claude records the decision in docs/system/REQUIEM_DECISION_LOG.md.
+3. Task specification — GPT writes it. Claude saves it in the repository as a passported file (docs/app/tasks/TASK-NNN_….md) and registers the TASK ID in docs/system/REQUIEM_DOCUMENTATION_INDEX.md.
+4. Check — Claude compares the specification with the code and documents and reports every mismatch before any change.
+5. Implementation — Claude, on a separate branch: application code in Claude Code on the owner's PC (requiem-tauri/CLAUDE.md); documentation in the repositories.
+6. Validation — Claude runs build and start checks and gives the owner a short list of manual checks in Russian. The owner checks the running window by hand.
+7. Review — the owner forwards Claude's report to GPT. GPT checks it item by item against the specification.
+8. Approval — the owner says "OK" and the branch is merged into main (by the owner on GitHub or by Claude after the OK).
+9. Session end — Claude updates docs/system/REQUIEM_ACTIVE_SESSION.md, the ID registry, and when a step is accepted the roadmap (REQUIEM_ROADMAP.md and REQUIEM_ROADMAP.html together).
+
+Exception: small visual tweaks the owner asks for directly (a color, a spacing, a text) skip steps 2–3 and 7 (CLAUDE_IMPLEMENTATION_PROTOCOL.md, Level 0). They still use a branch and the owner's OK.
 
 ---
 

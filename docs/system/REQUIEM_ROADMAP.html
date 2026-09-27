@@ -235,6 +235,16 @@ Open this file in a browser to view it.
   footer { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; color: var(--text-3); border-top: 1px solid var(--seam); padding-top: 16px; }
   footer code { font-family: var(--mono); color: var(--text-2); }
 
+  /* Working cycle */
+  .cycle { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; counter-reset: c; }
+  .cycle li { counter-increment: c; display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; border: 1px solid var(--seam); border-radius: 4px; }
+  .cycle li::before { content: counter(c, decimal-leading-zero); font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+  .cycle .who { align-self: flex-start; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; }
+  .who.owner { color: var(--st-paused); background: var(--st-paused-bg); }
+  .who.gpt { color: var(--st-frozen); background: var(--st-frozen-bg); }
+  .who.claude { color: var(--st-active); background: var(--st-active-bg); }
+  .cycle .what { color: var(--text); font-size: 13.5px; }
+
   @media (max-width: 720px) {
     h1 { font-size: 25px; }
     .qi { grid-template-columns: 1fr; }
@@ -398,6 +408,25 @@ Open this file in a browser to view it.
         </ul>
       </div>
     </div>
+  </section>
+
+  <section aria-labelledby="h-cycle" style="display:flex;flex-direction:column;gap:14px">
+    <div class="sec-head">
+      <h2 id="h-cycle">Как идёт работа</h2>
+      <p>Один цикл на любую задачу. Подробно: REQUIEM_AI_WORKFLOW.md, раздел 8.</p>
+    </div>
+    <ol class="cycle">
+      <li><span class="who owner">Владелец</span><span class="what">Идея или запрос.</span></li>
+      <li><span class="who gpt">GPT</span><span class="what">Варианты и рекомендация. Решает владелец.</span></li>
+      <li><span class="who gpt">GPT</span><span class="what">Пишет ТЗ. Claude сохраняет его в репозиторий.</span></li>
+      <li><span class="who claude">Claude</span><span class="what">Сверяет ТЗ с кодом, докладывает расхождения.</span></li>
+      <li><span class="who claude">Claude</span><span class="what">Делает в отдельной ветке: код в Claude Code, документы в репозитории.</span></li>
+      <li><span class="who owner">Владелец</span><span class="what">Проверяет окно руками по списку от Claude.</span></li>
+      <li><span class="who gpt">GPT</span><span class="what">Проверяет отчёт Claude по пунктам ТЗ.</span></li>
+      <li><span class="who owner">Владелец</span><span class="what">Говорит «ок» — ветка сливается в main.</span></li>
+      <li><span class="who claude">Claude</span><span class="what">Обновляет ACTIVE_SESSION, реестр меток и эту карту.</span></li>
+    </ol>
+    <p class="note">Мелкие правки внешнего вида (цвет, отступ, текст) идут сразу в Claude Code, без GPT и ТЗ — но тоже в ветке и после твоего «ок».</p>
   </section>
 
   <details>
