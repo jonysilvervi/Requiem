@@ -37,6 +37,7 @@ REQUIEM Visual Core (Decision #011).
 
 # COMPLETED THIS SESSION
 
+- [TASK-001] / [STEP-R0-01] implemented by Claude Code in `requiem-tauri`: branch `visual-core/r0-step1-l0-shell`, commit `6b02445`. L0 window chrome (drag region, minimize, maximize/restore, close) moved into `src/app/shell/ShellChrome.jsx`; default theme set statically to dark in `index.html`; the four calibrated color tokens fixed in `src/index.css` for dark and light. `npm run build` succeeded. Branch is NOT merged into `main`. Owner manual validation (drag, buttons, minimize/maximize/close, dark default, placeholder) is still pending; GPT report review is still pending.
 - Documentation moved into the repository jonysilvervi/Requiem (Decision #008).
 - Memory Core put into a clean pause: Knowledge Model v0.5 with the recorded boundary decision and a resume point; development protocol, state and registry updated.
 - Ecosystem documentation brought up to date: Decision Log, Changelog, this file, reading order.
@@ -58,9 +59,10 @@ REQUIEM Visual Core (Decision #011).
 
 # NEXT ACTIONS
 
-1. Start the visual work: Claude Code in the requiem-tauri folder (reads CLAUDE.md), new GPT chat for Visual Core.
-2. [TASK-001] ([STEP-R0-01]): status SPECIFIED, not executed. The specification is stored in docs/app/tasks/TASK-001_R0_STEP1_L0_SHELL.md; Claude executes it in Claude Code after the roadmap; the owner checks the result with npm run tauri dev.
-3. Owner: answer [Q-001] — where the PowerShell Execution Engine code lives.
+1. Owner: manually validate branch `visual-core/r0-step1-l0-shell` (commit `6b02445`) with `npm run tauri dev` against the checklist in TASK-001 section "B. Human owner checks manually" (drag, buttons excluded from drag, minimize, maximize/restore, close, dark default, `REQUIEM VISUAL CORE` placeholder, button hover visuals, no palette/theme controls yet).
+2. Owner forwards Claude's report on [TASK-001] to GPT for review.
+3. After owner says "OK" and GPT review, merge `visual-core/r0-step1-l0-shell` into `main`; then plan [STEP-R0-02] (L1 NAVIGATION).
+4. Owner: answer [Q-001] — where the PowerShell Execution Engine code lives.
 
 ---
 
