@@ -43,7 +43,7 @@ Updated: 2026-09-27
 
 ## Update Rule
 
-Claude updates this roadmap after each completed STEP; GPT reviews the update before owner approval.
+Claude updates this roadmap after each completed STEP, together with its visual view `docs/system/REQUIEM_ROADMAP.html`; GPT reviews the update before owner approval. If the two differ, this file is right.
 
 ## Sources
 
