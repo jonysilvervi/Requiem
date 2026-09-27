@@ -1,6 +1,6 @@
 # REQUIEM AI SESSION PROTOCOL
 
-Version: 1.0 Draft
+Version: 1.1 Draft
 
 Document Type:
 AI Session Initialization Protocol
@@ -23,6 +23,15 @@ The documentation system is the source of continuity.
 # 2. SESSION START ORDER
 
 Before performing any task:
+
+## Step 0
+
+Read the repository entry points (Decision #008):
+
+- README.md;
+- docs/system/REQUIEM_ACTIVE_SESSION.md.
+
+---
 
 ## Step 1
 
@@ -93,6 +102,13 @@ Evaluate:
 - Does documentation require updates?
 - Was a new decision made?
 - Did architecture change?
+
+Always, at the end of every work session:
+
+- update docs/system/REQUIEM_ACTIVE_SESSION.md: what was done, where work stopped, what is next;
+- commit the change to the repository.
+
+The next session continues from that file, not from chat history.
 
 ---
 

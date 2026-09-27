@@ -1,6 +1,6 @@
 # REQUIEM ACTIVE SESSION
 
-Version: 1.0 Draft
+Version: 1.1 Draft
 
 Document Type:
 Current Work Session State
@@ -8,76 +8,58 @@ Current Work Session State
 Purpose:
 Preserve the current development position between work sessions.
 
+Rule:
+This file is updated at the end of every work session (Decision #010). A new session reads it right after README.md.
+
 ---
 
 # CURRENT SESSION
 
 Date:
 
-2026-09-23
+2026-09-27
 
 ---
 
 # CURRENT FOCUS
 
-PROJECT Documentation Synchronization and Phase 1 Foundation Closure.
+REQUIEM Visual Core (Decision #011).
 
 ---
 
-# COMPLETED
+# FROZEN
 
-## AI System
-
-Created:
-
-- GPT role documentation;
-- Claude role documentation;
-- Gemini role documentation;
-- AI workflow structure;
-- AI automation concept;
-- AI automation design.
+- Execution Engine (PowerShell) — frozen (Decision #010).
+- Memory Core development — paused at REQUIEM_KNOWLEDGE_MODEL.md v0.5; resume point at the top of that document (Decision #009).
+- New architecture documentation — frozen (Decision #010).
 
 ---
 
-## Documentation System
+# COMPLETED THIS SESSION
 
-Created:
-
-- Documentation Index;
-- Decision Log;
-- Change Log.
-
----
-
-# CURRENT STATE
-
-The documentation foundation is established.
-
-AI collaboration model is defined.
-
-Automation principles are documented.
-
-Project continuity system is created.
+- Documentation moved into the repository jonysilvervi/Requiem (Decision #008).
+- Memory Core put into a clean pause: Knowledge Model v0.5 with the recorded boundary decision and a resume point; development protocol, state and registry updated.
+- Ecosystem documentation brought up to date: Decision Log, Changelog, this file, reading order.
 
 ---
 
 # NEXT ACTIONS
 
-1. Physical Core Skeleton structure creation.
-2. Create initial Phase 1 contracts.
-3. Begin implementation after architecture review.
+1. Add the requiem-tauri code to the repository.
+2. Check the real state of REQUIEM Application against docs/app/NOTES.md and update REQUIEM_CURRENT_STATE_SNAPSHOT.md.
+3. Start Visual Core work.
 
 ---
 
 # OPEN QUESTIONS
 
-None currently.
+- Approval of memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md v0.7 by the human owner.
 
 ---
 
 # LAST UPDATE
 
-2026-09-23
+2026-09-27
 
 ---
 

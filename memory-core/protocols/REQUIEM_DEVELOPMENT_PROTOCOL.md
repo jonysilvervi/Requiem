@@ -1,6 +1,6 @@
 # REQUIEM DEVELOPMENT PROTOCOL
 
-Version: 0.5
+Version: 0.6
 
 Document Type:
 AI Development Rules
@@ -128,15 +128,19 @@ Completed:
 
 Current direction:
 
-Architecture map preparation and approval.
+Memory Core development is PAUSED (2026-09-27, decision of the human maintainer).
 
-Status:
+Last state:
 
-Direction only.
+- v0.7 Foundation approved (REQUIEM_DOCUMENT_REGISTRY.md, section 8.4);
+- REQUIEM_KNOWLEDGE_MODEL_SCOPE.md v0.3 approved (REQUIEM_DOCUMENT_REGISTRY.md, section 8.6);
+- REQUIEM_KNOWLEDGE_MODEL.md (DOC-022) version 0.5, DRAFT, paused. Its resume point is at the top of that document.
 
-The architecture map is written and approved by a human (DEC-017).
+While paused:
 
-AI may prepare a draft only on request.
+- no new Memory Core work starts without an explicit request of the human maintainer;
+- the implemented layers (checkpoint CP-006) remain usable as they are;
+- the architecture map task (DEC-017) is not active; the role of the architecture map is decided together with the approval of Knowledge Model v1 (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 6).
 
 Not:
 

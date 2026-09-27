@@ -20,6 +20,18 @@ Games and external systems (S.T.A.L.K.E.R. 2 is the first one) are *environments
 REQUIEM connects to them through adapters but does not own them.
 Full definitions: `memory-core/context/REQUIEM_GLOSSARY.md`.
 
+## Current state
+
+| Area | State |
+|---|---|
+| REQUIEM Visual Core | **ACTIVE** — current work stream (Decision #011) |
+| Execution Engine (PowerShell) | **FROZEN** (Decision #010) |
+| Memory Core | **PAUSED** at Knowledge Model v0.5; resume point at the top of `memory-core/context/REQUIEM_KNOWLEDGE_MODEL.md` (Decision #009) |
+| Architecture documentation | **FROZEN** for new documents; maintenance continues (Decision #010) |
+
+Where work stopped and what is next: `docs/system/REQUIEM_ACTIVE_SESSION.md`.
+Decisions: `docs/system/REQUIEM_DECISION_LOG.md`.
+
 ## Repository layout
 
 | Folder | What it is | Status |
@@ -32,11 +44,12 @@ Full definitions: `memory-core/context/REQUIEM_GLOSSARY.md`.
 
 ## Reading order for a new session (human or AI)
 
-1. `memory-core/context/REQUIEM_GLOSSARY.md` — terminology, so nothing gets misread.
-2. `memory-core/context/REQUIEM_FOUNDATION_DECISIONS.md` — the approved architectural decisions (FD-B1…FD-B8).
-3. `memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md` — the real status of every document.
-4. `docs/ai/` — who does what (GPT / Claude / Gemini / human).
-5. Whatever the current task actually concerns.
+1. `docs/system/REQUIEM_ACTIVE_SESSION.md` — where work stopped and what is next.
+2. `docs/ai/COMMON/REQUIEM_AI_MASTER_CONTEXT.md` — identity, principles, current state.
+3. `docs/ai/` — who does what (GPT / Claude / Gemini / human).
+4. For the task at hand: `docs/app/` for the application, `memory-core/context/` for Memory Core (start with `REQUIEM_GLOSSARY.md` and `REQUIEM_DOCUMENT_REGISTRY.md`).
+
+At the end of every work session, `docs/system/REQUIEM_ACTIVE_SESSION.md` is updated and committed.
 
 ## Working rules
 

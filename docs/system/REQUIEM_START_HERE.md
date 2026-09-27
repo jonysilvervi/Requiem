@@ -1,6 +1,6 @@
 # REQUIEM START HERE
 
-Version: 1.0
+Version: 1.1
 
 Document Type:
 Documentation Entry Point
@@ -24,63 +24,39 @@ REQUIEM documentation is designed to preserve project continuity independently f
 
 # 2. FIRST READING ORDER
 
-Before performing any work, read documents in this order:
+All documentation lives in the repository jonysilvervi/Requiem (Decision #008).
+
+Before performing any work, read in this order:
 
 ## Step 1
 
-Read:
-
-REQUIEM_AI_MASTER_CONTEXT.md
-
-Purpose:
-
-Understand:
-
-- project identity;
-- philosophy;
-- global principles.
+README.md (repository root) — what REQUIEM is and how the repository is organized.
 
 ---
 
 ## Step 2
 
-Read:
-
-REQUIEM_DOCUMENTATION_INDEX.md
-
-Purpose:
-
-Understand documentation structure.
+docs/system/REQUIEM_ACTIVE_SESSION.md — where work stopped, what is frozen, what is next.
 
 ---
 
 ## Step 3
 
-Read:
-
-REQUIEM_CURRENT_STATE_SNAPSHOT.md
-
-Purpose:
-
-Understand the actual project state.
+docs/ai/COMMON/REQUIEM_AI_MASTER_CONTEXT.md — identity, philosophy, global principles.
 
 ---
 
 ## Step 4
 
-Read relevant architecture documents.
+docs/app/REQUIEM_CURRENT_STATE_SNAPSHOT.md — state of REQUIEM Application, with docs/app/NOTES.md.
 
-Examples:
-
-- Phase documents;
-- system specifications;
-- implementation plans.
+For Memory Core work: memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md and the resume point in memory-core/context/REQUIEM_KNOWLEDGE_MODEL.md.
 
 ---
 
 ## Step 5
 
-Read task-specific documentation.
+Task-specific documentation.
 
 ---
 
