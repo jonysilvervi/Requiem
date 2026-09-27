@@ -44,14 +44,40 @@ rewritten to match the result.
 7. **Before the bridge is used for real:** `run_core_bridge` inserts `action` into the PowerShell
    command text without escaping. A value containing a quote would change the command. This
    must be fixed before any real input reaches it (the engine is frozen, Decision #010).
-8. **The native window flashes white for about a second before the static dark theme paints.**
-   Found during TASK-001 / STEP-R0-01 owner manual validation on 2026-09-27 (`npm run tauri dev`).
-   `index.html` sets `data-theme="dark"` statically, but that only controls what CSS renders once
-   the page paints; it cannot pre-empt the native window itself. `src-tauri/tauri.conf.json` sets
-   `"transparent": true` on the window with no explicit background color, so the window is shown
-   before WebView2 finishes loading and painting `index.html`, and the blank/white WebView2
-   surface is visible until first paint completes. Two candidate fixes, neither implemented
-   (both touch the frozen `src-tauri`, Decision #010, and TASK-001 explicitly forbids editing
-   `tauri.conf.json`): (a) set an explicit dark `backgroundColor` on the window in
-   `src-tauri/tauri.conf.json`; (b) create the window hidden (`"visible": false`) and show it from
-   `src-tauri/src/lib.rs` only after the frontend signals it has rendered.
+8. **RESOLVED 2026-09-27.** The native window used to flash white, with a brief transparent
+   phase, for about a second before the static dark theme painted. Symptom confirmed by the owner
+   during TASK-001 / STEP-R0-01 manual validation on 2026-09-27 (`npm run tauri dev`); confirmed
+   fixed by the owner the same day via a frame-by-frame video review (no white frame, no
+   transparent phase, window appears already fully rendered).
+   Two root-cause hypotheses were recorded: (a) `src-tauri/tauri.conf.json` had `"transparent":
+   true` on the window with no explicit background color, so the native window could be shown
+   before WebView2 finished loading and painting `index.html`; (b) the dark background only
+   existed in `src/index.css`, loaded through the `<script type="module" src="/src/main.jsx">`
+   import graph, so the browser could paint the raw HTML (default white background) before that
+   module executed and injected the stylesheet.
+   Attempts, in order, all on branch `visual-core/r0-step1-l0-shell`:
+   1. GPT review selected Variant A for hypothesis (b): minimal inline dark background
+      (`background-color: #0c0e11`) added to `index.html` (allowed by TASK-001). Built and run by
+      the owner — **did not fix it**.
+   2. Owner granted a one-line exception to the `src-tauri` freeze (Decision #010), 2026-09-27:
+      `"backgroundColor": "#0c0e11"` added to the window in `tauri.conf.json`. Built and run —
+      **did not fix it alone**.
+   3. Owner extended the exception: `"transparent": false` (kept `backgroundColor`). Built and
+      run — **partial improvement**, white flash remained.
+   4. Owner extended the exception further: window created hidden (`"visible": false` in
+      `tauri.conf.json`), made visible only via `getCurrentWindow().show()` called once in a
+      `useEffect` in `src/app/shell/WindowFrame.jsx` after the shell's first render — window-show
+      ownership stays in L0 shell. Required adding the `core:window:allow-show` capability in
+      `src-tauri/capabilities/default.json` (verified against the local schema
+      `src-tauri/gen/schemas/desktop-schema.json`: the permission is not part of
+      `core:window:default`). `src-tauri/src/lib.rs` was not touched — the fix uses only the
+      existing `@tauri-apps/api/window` JS binding. Built and run — **fixed it**, confirmed by the
+      owner's frame-by-frame review.
+   Final state: `transparent: false`, `backgroundColor: "#0c0e11"`, `visible: false` +
+   `WindowFrame.jsx` showing the window after first render.
+   Residual risk: if the frontend throws before that `useEffect` runs, `show()` is never called
+   and the window never becomes visible, with no native fallback to indicate the app is running.
+   For GPT review: `src-tauri/tauri.conf.json` and `src-tauri/capabilities/default.json` were
+   edited under a one-time owner exception to the `src-tauri` freeze (Decision #010), granted
+   2026-09-27, scoped to exactly this fix; TASK-001 explicitly forbade editing these files, and
+   this work is authorized separately from TASK-001's original scope.

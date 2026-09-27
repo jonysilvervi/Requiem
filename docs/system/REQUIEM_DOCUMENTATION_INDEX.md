@@ -214,7 +214,7 @@ Source: docs/app/NOTES.md, section "Open findings for the owner", findings 1–8
 | ISS-005 | Implementation Plan references the old Core Skeleton spec version | 5 | |
 | ISS-006 | PowerShell bridge is a stub; the real Execution Engine location is open | 6 | Q-001 |
 | ISS-007 | PowerShell bridge inserts action input without escaping; must be fixed before real input is used | 7 | |
-| ISS-008 | Native window flashes white for about a second before the static dark theme paints (transparent window with no background color, shown before WebView2 first paint) | 8 | TASK-001 |
+| ISS-008 | RESOLVED — native window flashed white before the static dark theme painted; fixed by creating the window hidden and showing it from src/app/shell after first render | 8 | TASK-001 |
 
 ---
 
