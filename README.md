@@ -30,7 +30,7 @@ Full definitions: `memory-core/context/REQUIEM_GLOSSARY.md`.
 | Architecture documentation | **FROZEN** for new documents; maintenance continues (Decision #010) |
 
 Where work stopped and what is next: `docs/system/REQUIEM_ACTIVE_SESSION.md`.
-The whole ecosystem at a glance: `docs/system/REQUIEM_ROADMAP.md`.
+The whole ecosystem at a glance: `docs/system/REQUIEM_ROADMAP.md` (visual view: `docs/system/REQUIEM_ROADMAP.html`, open it in a browser).
 Decisions: `docs/system/REQUIEM_DECISION_LOG.md`.
 
 ## Repository layout

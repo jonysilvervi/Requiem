@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--
+ID: N/A
+Type: Ecosystem Roadmap (visual view)
+Document Status: DRAFT
+Area: N/A
+Updated: 2026-09-27
+Visual view of docs/system/REQUIEM_ROADMAP.md. The Markdown file is the source; if they differ, the Markdown file is right.
+Open this file in a browser to view it.
+-->
+<style>body{margin:0}</style>
+</head>
+<body>
+<title>REQUIEM Ecosystem Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  /* Palette = REQUIEM R0 foundation tokens (requiem-tauri: src/index.css, theme blocks),
+     with the four calibrated values fixed as in TASK-001. Light is the bare :root. */
+  :root {
+    --m1: #9ba0a7;
+    --m2: rgb(211, 216, 222);
+    --m3-hover: rgba(20, 23, 27, 0.06);
+    --seam: rgba(255, 255, 255, 0.3);
+    --seam-dark: rgba(20, 23, 27, 0.16);
+    --text: #16191d;
+    --text-2: rgba(22, 25, 29, 0.64);
+    --text-3: rgba(22, 25, 29, 0.42);
+    --accent: #2f62c4;
+    --accent-quiet: rgba(47, 98, 196, 0.14);
+    --st-active: #1f7a52;
+    --st-active-bg: rgba(31, 122, 82, 0.14);
+    --st-frozen: #34648f;
+    --st-frozen-bg: rgba(52, 100, 143, 0.14);
+    --st-paused: #85600f;
+    --st-paused-bg: rgba(133, 96, 15, 0.14);
+    --st-pending: rgba(22, 25, 29, 0.6);
+    --crit: #b23f3c;
+    --font: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, "Cascadia Code", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --m1: #0c0e11;
+      --m2: rgb(27, 29, 32);
+      --m3-hover: rgba(255, 255, 255, 0.05);
+      --seam: rgba(255, 255, 255, 0.09);
+      --seam-dark: rgba(0, 0, 0, 0.7);
+      --text: #e7eaee;
+      --text-2: rgba(231, 234, 238, 0.6);
+      --text-3: rgba(231, 234, 238, 0.36);
+      --accent: #4f83e6;
+      --accent-quiet: rgba(79, 131, 230, 0.16);
+      --st-active: #4cc38a;
+      --st-active-bg: rgba(76, 195, 138, 0.13);
+      --st-frozen: #8fb6de;
+      --st-frozen-bg: rgba(143, 182, 222, 0.12);
+      --st-paused: #e0b25a;
+      --st-paused-bg: rgba(224, 178, 90, 0.12);
+      --st-pending: rgba(231, 234, 238, 0.55);
+      --crit: #d9534f;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --m1: #0c0e11;
+    --m2: rgb(27, 29, 32);
+    --m3-hover: rgba(255, 255, 255, 0.05);
+    --seam: rgba(255, 255, 255, 0.09);
+    --seam-dark: rgba(0, 0, 0, 0.7);
+    --text: #e7eaee;
+    --text-2: rgba(231, 234, 238, 0.6);
+    --text-3: rgba(231, 234, 238, 0.36);
+    --accent: #4f83e6;
+    --accent-quiet: rgba(79, 131, 230, 0.16);
+    --st-active: #4cc38a;
+    --st-active-bg: rgba(76, 195, 138, 0.13);
+    --st-frozen: #8fb6de;
+    --st-frozen-bg: rgba(143, 182, 222, 0.12);
+    --st-paused: #e0b25a;
+    --st-paused-bg: rgba(224, 178, 90, 0.12);
+    --st-pending: rgba(231, 234, 238, 0.55);
+    --crit: #d9534f;
+  }
+
+  body {
+    background: var(--m1);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 28px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .mono { font-family: var(--mono); }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+  h1, h2 { margin: 0; text-wrap: balance; font-weight: 600; }
+  h1 { font-size: 30px; letter-spacing: -0.01em; line-height: 1.15; }
+  h2 { font-size: 16px; letter-spacing: 0.01em; }
+
+  /* Header */
+  header { display: flex; flex-direction: column; gap: 10px; }
+  .passport {
+    display: flex; flex-wrap: wrap; gap: 6px 18px;
+    font-family: var(--mono); font-size: 12px; color: var(--text-2);
+  }
+  .passport b { color: var(--text-3); font-weight: 400; }
+
+  /* Summary strip */
+  .summary { display: flex; flex-direction: column; gap: 12px; }
+  .bar {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px;
+    height: 10px;
+  }
+  .bar span { border-radius: 2px; }
+  .bar .active { background: var(--st-active); }
+  .bar .frozen { background: var(--st-frozen); }
+  .bar .paused { background: var(--st-paused); }
+  .bar .pending { background: transparent; border: 1px dashed var(--st-pending); }
+  .counts { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--text-2); }
+  .counts strong { color: var(--text); font-variant-numeric: tabular-nums; font-weight: 600; margin-right: 4px; }
+
+  /* Status pill */
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    padding: 3px 8px; border-radius: 3px; white-space: nowrap;
+  }
+  .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .pill.active { color: var(--st-active); background: var(--st-active-bg); }
+  .pill.frozen { color: var(--st-frozen); background: var(--st-frozen-bg); }
+  .pill.paused { color: var(--st-paused); background: var(--st-paused-bg); }
+  .pill.pending { color: var(--st-pending); border: 1px dashed var(--st-pending); }
+  .pill.pending::before { background: transparent; border: 1px solid currentColor; }
+
+  /* Section heading */
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-bottom: 10px; border-bottom: 1px solid var(--seam); }
+  .sec-head p { margin: 0; font-size: 13px; color: var(--text-3); }
+
+  /* Area board */
+  .board { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+  .area {
+    display: flex; flex-direction: column; gap: 14px;
+    padding: 18px;
+    border: 1px solid var(--seam);
+    border-radius: 4px;
+    background: transparent;
+  }
+  .area.is-active {
+    background: var(--m2);
+    border-color: var(--seam);
+    box-shadow: 0 1px 0 var(--seam) inset, 0 8px 24px -16px var(--seam-dark);
+  }
+  .area-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .area-id { font-family: var(--mono); font-size: 12px; color: var(--text-3); }
+  .area h3 { margin: 0; font-size: 17px; font-weight: 600; text-wrap: balance; }
+  .area h3 small { display: block; font-size: 12px; font-weight: 400; color: var(--text-3); margin-top: 2px; }
+  .phases { display: grid; grid-template-columns: 64px 1fr; gap: 6px 12px; margin: 0; }
+  .phases dt { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); padding-top: 2px; }
+  .phases dd { margin: 0; color: var(--text-2); }
+  .phases dd.now { color: var(--text); }
+  .blockers { font-size: 13px; color: var(--text-2); display: flex; gap: 8px; align-items: baseline; }
+  .blockers.has { color: var(--text); }
+  .blockers .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); flex: none; }
+  .blockers.has .lbl { color: var(--crit); }
+  .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+  .id {
+    font-family: var(--mono); font-size: 11.5px;
+    padding: 2px 7px; border-radius: 3px;
+    color: var(--accent); background: var(--accent-quiet);
+  }
+  .id.legacy { color: var(--text-2); background: var(--m3-hover); }
+  .note { font-size: 12.5px; color: var(--text-3); margin: 0; }
+
+  /* Active path */
+  .path { overflow-x: auto; }
+  .track { display: grid; grid-template-columns: repeat(6, minmax(130px, 1fr)); min-width: 780px; }
+  .step { position: relative; display: flex; flex-direction: column; gap: 8px; padding-top: 30px; padding-right: 12px; }
+  .step::before {
+    content: ""; position: absolute; top: 9px; left: 0; right: 0; height: 2px; background: var(--seam);
+  }
+  .step:first-child::before { left: 9px; }
+  .step:last-child::before { right: auto; width: 9px; }
+  .dot {
+    position: absolute; top: 2px; left: 0;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--m1); border: 2px solid var(--text-3);
+  }
+  .step.current .dot { border-color: var(--st-active); background: var(--st-active-bg); box-shadow: 0 0 0 4px var(--st-active-bg); }
+  .step-id { font-family: var(--mono); font-size: 12px; color: var(--text-3); }
+  .step.current .step-id { color: var(--st-active); }
+  .step-name { font-weight: 600; font-size: 14px; }
+  .step-state { font-size: 12.5px; color: var(--text-2); }
+  .step:not(.current) .step-name { color: var(--text-2); }
+
+  /* Questions & issues */
+  .qi { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; }
+  .list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .list li { display: grid; grid-template-columns: 76px 1fr; gap: 12px; align-items: baseline; padding-block: 9px; border-bottom: 1px solid var(--seam); }
+  .list li:last-child { border-bottom: 0; }
+  .list .text { color: var(--text-2); }
+  .list .text strong { color: var(--text); font-weight: 500; }
+  .list .crit { color: var(--crit); }
+  .list-title { font-size: 13px; font-weight: 600; margin: 0 0 4px; color: var(--text-2); }
+
+  /* Sources + footer */
+  details { border-top: 1px solid var(--seam); padding-top: 14px; }
+  summary { cursor: pointer; font-weight: 600; color: var(--text-2); list-style: none; display: flex; gap: 8px; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "+"; font-family: var(--mono); color: var(--text-3); width: 12px; }
+  details[open] summary::before { content: "−"; }
+  summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .sources { margin: 14px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-2); }
+  .sources .src { font-family: var(--mono); font-size: 12px; color: var(--text); display: block; }
+  footer { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; color: var(--text-3); border-top: 1px solid var(--seam); padding-top: 16px; }
+  footer code { font-family: var(--mono); color: var(--text-2); }
+
+  @media (max-width: 720px) {
+    h1 { font-size: 25px; }
+    .qi { grid-template-columns: 1fr; }
+    .board { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">REQUIEM · экосистема</div>
+    <h1>Карта работ</h1>
+    <div class="passport">
+      <span><b>ID</b> N/A</span>
+      <span><b>Type</b> Ecosystem Roadmap</span>
+      <span><b>Document Status</b> DRAFT</span>
+      <span><b>Area</b> N/A</span>
+      <span><b>Updated</b> 2026-09-27</span>
+    </div>
+  </header>
+
+  <section class="summary" aria-label="Состояние областей">
+    <div class="bar" aria-hidden="true">
+      <span class="active"></span>
+      <span class="frozen"></span>
+      <span class="frozen"></span>
+      <span class="paused"></span>
+      <span class="paused"></span>
+      <span class="pending"></span>
+    </div>
+    <div class="counts">
+      <span><strong>1</strong>в работе</span>
+      <span><strong>2</strong>заморожено</span>
+      <span><strong>2</strong>на паузе</span>
+      <span><strong>1</strong>ждёт решения</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-areas" style="display:flex;flex-direction:column;gap:14px">
+    <div class="sec-head">
+      <h2 id="h-areas">Области</h2>
+      <p>Сейчас → Дальше → Потом. Без дат, только порядок.</p>
+    </div>
+
+    <div class="board">
+
+      <article class="area is-active">
+        <div class="area-top"><span class="area-id">AREA-VC</span><span class="pill active">ACTIVE</span></div>
+        <h3>REQUIEM Visual Core<small>визуальная среда экосистемы</small></h3>
+        <dl class="phases">
+          <dt>Сейчас</dt><dd class="now">ТЗ на TASK-001 готово, шаг STEP-R0-01 ещё не выполнен.</dd>
+          <dt>Дальше</dt><dd>Выполнить и проверить STEP-R0-01.</dd>
+          <dt>Потом</dt><dd>Шаги STEP-R0-02 → STEP-R0-06 по порядку.</dd>
+        </dl>
+        <div class="blockers"><span class="lbl">Блокеры</span><span>нет</span></div>
+        <div class="links"><span class="id">ED-011</span><span class="id">ED-012</span><span class="id">ED-013</span><span class="id">TASK-001</span></div>
+      </article>
+
+      <article class="area">
+        <div class="area-top"><span class="area-id">AREA-EE</span><span class="pill frozen">FROZEN</span></div>
+        <h3>Execution Engine<small>PowerShell</small></h3>
+        <dl class="phases">
+          <dt>Сейчас</dt><dd class="now">В приложении только заглушка; где лежит движок — открытый вопрос.</dd>
+          <dt>Дальше</dt><dd>Работы нет, пока владелец не ответит на Q-001 и не разморозит область.</dd>
+          <dt>Потом</dt><dd>Интеграция — после решения, какому слою принадлежит код.</dd>
+        </dl>
+        <div class="blockers has"><span class="lbl">Блокеры</span><span>Q-001, ISS-006, ISS-007, заморозка ED-010</span></div>
+        <div class="links"><span class="id">ED-010</span><span class="id">Q-001</span><span class="id">ISS-006</span><span class="id">ISS-007</span></div>
+      </article>
+
+      <article class="area">
+        <div class="area-top"><span class="area-id">AREA-MC</span><span class="pill paused">PAUSED</span></div>
+        <h3>Memory Core<small>система непрерывности проекта</small></h3>
+        <dl class="phases">
+          <dt>Сейчас</dt><dd class="now">Knowledge Model v0.5 на паузе; CP-006 работает как есть.</dd>
+          <dt>Дальше</dt><dd>При возобновлении — решить, что бывает после DEPRECATED.</dd>
+          <dt>Потом</dt><dd>Дописать Knowledge Model и перевести в REVIEW.</dd>
+        </dl>
+        <div class="blockers has"><span class="lbl">Блокеры</span><span>разрешение владельца; открыты O2, O5, O7</span></div>
+        <div class="links"><span class="id">ED-009</span><span class="id legacy">O2</span><span class="id legacy">O5</span><span class="id legacy">O7</span></div>
+      </article>
+
+      <article class="area">
+        <div class="area-top"><span class="area-id">AREA-MP</span><span class="pill frozen">FROZEN</span></div>
+        <h3>REQUIEM Mod Pack<small>сборка модов S.T.A.L.K.E.R. 2</small></h3>
+        <dl class="phases">
+          <dt>Сейчас</dt><dd class="now">Работы нет.</dd>
+          <dt>Дальше</dt><dd>Только по решению владельца.</dd>
+          <dt>Потом</dt><dd>Не определено.</dd>
+        </dl>
+        <div class="blockers"><span class="lbl">Блокеры</span><span>нет; O2 касается будущих связей между проектами</span></div>
+        <div class="links"><span class="id legacy">O2</span></div>
+      </article>
+
+      <article class="area">
+        <div class="area-top"><span class="area-id">AREA-RE</span><span class="pill pending">ЖДЁТ РЕШЕНИЯ</span></div>
+        <h3>REQUIEM Engine<small>внутренний движок экосистемы</small></h3>
+        <dl class="phases">
+          <dt>Сейчас</dt><dd class="now">Границы не определены; вопрос O6 открыт.</dd>
+          <dt>Дальше</dt><dd>Решить O6, потом присвоить статус.</dd>
+          <dt>Потом</dt><dd>Определить границы движка и связь с контрактами приложения.</dd>
+        </dl>
+        <div class="blockers has"><span class="lbl">Блокеры</span><span>O6</span></div>
+        <div class="links"><span class="id legacy">O6</span></div>
+        <p class="note">Статуса пока нет намеренно: по ED-014 «ждёт решения» — не статус области.</p>
+      </article>
+
+      <article class="area">
+        <div class="area-top"><span class="area-id">AREA-TL</span><span class="pill paused">PAUSED</span></div>
+        <h3>Tools<small>вспомогательные утилиты</small></h3>
+        <dl class="phases">
+          <dt>Сейчас</dt><dd class="now">Существующие инструменты используются как есть.</dd>
+          <dt>Дальше</dt><dd>Работы не запланировано.</dd>
+          <dt>Потом</dt><dd>Добавлять, когда понадобится другой области.</dd>
+        </dl>
+        <div class="blockers"><span class="lbl">Блокеры</span><span>нет</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="h-path" style="display:flex;flex-direction:column;gap:18px">
+    <div class="sec-head">
+      <h2 id="h-path">Активный путь · AREA-VC</h2>
+      <p>Перенос прототипа R0 в структуру Phase 1, слой за слоем (ED-013).</p>
+    </div>
+    <div class="path" tabindex="0" aria-label="Шаги переноса R0">
+      <ol class="track" style="list-style:none;margin:0;padding:0">
+        <li class="step current"><span class="dot"></span><span class="step-id">STEP-R0-01</span><span class="step-name">L0 SHELL + тема + цвета</span><span class="step-state">ТЗ готово · <span class="mono">TASK-001</span></span></li>
+        <li class="step"><span class="dot"></span><span class="step-id">STEP-R0-02</span><span class="step-name">L1 NAVIGATION</span><span class="step-state">не начат</span></li>
+        <li class="step"><span class="dot"></span><span class="step-id">STEP-R0-03</span><span class="step-name">L2 WORKSPACE</span><span class="step-state">не начат</span></li>
+        <li class="step"><span class="dot"></span><span class="step-id">STEP-R0-04</span><span class="step-name">L4 SYSTEM</span><span class="step-state">безопасная часть · не начат</span></li>
+        <li class="step"><span class="dot"></span><span class="step-id">STEP-R0-05</span><span class="step-name">L3 INTELLIGENCE</span><span class="step-state">не начат</span></li>
+        <li class="step"><span class="dot"></span><span class="step-id">STEP-R0-06</span><span class="step-name">Очистка</span><span class="step-state">не начат</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-qi" style="display:flex;flex-direction:column;gap:14px">
+    <div class="sec-head">
+      <h2 id="h-qi">Открытые вопросы и проблемы</h2>
+      <p>Номера из реестра меток ED-014.</p>
+    </div>
+    <div class="qi">
+      <div>
+        <p class="list-title">Вопросы</p>
+        <ul class="list">
+          <li><span class="id">Q-001</span><span class="text"><strong>Где лежит код движка PowerShell.</strong> Ответ за владельцем.</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="list-title">Проблемы</p>
+        <ul class="list">
+          <li><span class="id">ISS-001</span><span class="text">Прототип R0 не подключён; переносится слой за слоем.</span></li>
+          <li><span class="id">ISS-002</span><span class="text">Вернулись удалённые ранее зависимости.</span></li>
+          <li><span class="id">ISS-003</span><span class="text">Остатки шаблона и лишняя пустая папка.</span></li>
+          <li><span class="id">ISS-004</span><span class="text">Пустые папки не сохраняются в git.</span></li>
+          <li><span class="id">ISS-005</span><span class="text">План Phase 1 ссылается на старую версию спецификации.</span></li>
+          <li><span class="id">ISS-006</span><span class="text">Мост PowerShell в приложении — заглушка; где настоящий движок, неизвестно.</span></li>
+          <li><span class="id">ISS-007</span><span class="text"><span class="crit">До реального использования:</span> мост вставляет входные данные в команду без экранирования.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <details>
+    <summary>Источники в репозитории</summary>
+    <ul class="sources">
+      <li><span class="src">README.md, section Current state</span>Visual Core ACTIVE (#011), Execution Engine FROZEN (#010), Memory Core PAUSED at Knowledge Model v0.5.</li>
+      <li><span class="src">REQUIEM_ACTIVE_SESSION.md, sections NEXT ACTIONS / OPEN QUESTIONS</span>TASK-001 SPECIFIED, not executed; Q-001 open.</li>
+      <li><span class="src">REQUIEM_DECISION_LOG.md, Decisions #009–#013</span>Memory Core paused; engine frozen; Visual Core active; Phase 1 open; R0 carried layer by layer.</li>
+      <li><span class="src">REQUIEM_DOCUMENTATION_INDEX.md, section ALLOCATED IDENTIFIERS</span>AREA, ED, TASK, STEP, Q, ISS identifiers; TASK-001 SPECIFIED.</li>
+      <li><span class="src">R0_MIGRATION_PLAN.md, section Steps</span>Six steps from L0 SHELL to Cleanup.</li>
+      <li><span class="src">NOTES.md, section Open findings for the owner</span>Findings 1–7 = ISS-001…ISS-007.</li>
+      <li><span class="src">REQUIEM_KNOWLEDGE_MODEL.md, resume point</span>First step on resume: decide whether DEPRECATED is terminal.</li>
+      <li><span class="src">REQUIEM_FOUNDATION_DECISIONS.md, section 13</span>Open items O2, O5, O6, O7.</li>
+      <li><span class="src">REQUIEM_GLOSSARY.md, section 5</span>REQUIEM Engine: scope not decided (O6).</li>
+      <li><span class="src">Owner, 2026-09-27</span>AREA-MP FROZEN; AREA-TL PAUSED; AREA-RE pending O6; Q-001 pending.</li>
+    </ul>
+  </details>
+
+  <footer>
+    <span>Основной документ: <code>docs/system/REQUIEM_ROADMAP.md</code> в репозитории Requiem. Эта страница — его наглядная копия на 27.09.2026; при расхождении прав репозиторий.</span>
+    <span>Claude обновляет после каждого завершённого шага, GPT проверяет, владелец утверждает.</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
