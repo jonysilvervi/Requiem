@@ -231,7 +231,7 @@ Frozen:
 
 REQUIEM Application state:
 
-Recorded in docs/app/REQUIEM_CURRENT_STATE_SNAPSHOT.md. The application documents disagree about Phase 1 progress (docs/app/NOTES.md); the real code is the reference.
+Recorded in docs/app/REQUIEM_CURRENT_STATE_SNAPSHOT.md (verified against the code on 2026-09-27). The Phase 1 skeleton exists in code; open findings are listed in docs/app/NOTES.md. The real code is always the reference.
 
 The current position between sessions is recorded in docs/system/REQUIEM_ACTIVE_SESSION.md.
 

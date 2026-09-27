@@ -41,20 +41,22 @@ REQUIEM Visual Core (Decision #011).
 - Memory Core put into a clean pause: Knowledge Model v0.5 with the recorded boundary decision and a resume point; development protocol, state and registry updated.
 - Ecosystem documentation brought up to date: Decision Log, Changelog, this file, reading order.
 - REQUIEM_DOCUMENT_REGISTRY.md v0.7 approved by the human owner.
+- REQUIEM Application documents checked against the code: Phase 1 skeleton exists, build works; REQUIEM_CURRENT_STATE_SNAPSHOT.md v0.3, docs/app/NOTES.md.
 
 ---
 
 # NEXT ACTIONS
 
-1. Add the requiem-tauri code to the repository.
-2. Check the real state of REQUIEM Application against docs/app/NOTES.md and update REQUIEM_CURRENT_STATE_SNAPSHOT.md.
+1. Put requiem-tauri under git as its own repository (in place, without moving the folder) and give Claude and GPT access to it.
+2. Owner decisions from docs/app/NOTES.md: formal completion of Phase 1; what happens to the unconnected R0 prototype in src/App.jsx.
 3. Start Visual Core work.
 
 ---
 
 # OPEN QUESTIONS
 
-- None.
+- Formal completion of Phase 1 (docs/app/NOTES.md).
+- Fate of the R0 visual prototype in src/App.jsx (docs/app/NOTES.md, finding 1).
 
 ---
 

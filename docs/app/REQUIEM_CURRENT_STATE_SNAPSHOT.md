@@ -1,6 +1,6 @@
 # REQUIEM CURRENT STATE SNAPSHOT
 
-Version: 0.2  
+Version: 0.3  
 Status: Living Project Memory Document  
 Purpose: Recovery checkpoint, architectural continuity and handoff document.
 
@@ -171,6 +171,7 @@ tauri-plugin-opener
 clsx
 tailwind-merge
 
+Note (verified 2026-09-27): package.json still lists @tauri-apps/plugin-opener, clsx and tailwind-merge. They were either not removed or were added back.
 
 ---
 
@@ -225,36 +226,55 @@ Do not delete without architectural review.
 
 # 8. CURRENT APPLICATION STATE
 
-## App.jsx
+Verified against the code on 2026-09-27 (archive of requiem-tauri without src-tauri; src-tauri not checked).
 
-Current state:
+Entry point:
 
-Minimal foundation component.
+src/main.jsx renders AppRoot → RequiemShell → WindowFrame → MainLayout → Workspace.
 
-Purpose:
+The Workspace shows the text "REQUIEM VISUAL CORE". This is the whole visible interface at the moment.
 
-Maintain React mounting point.
+Build:
 
-The previous application model was intentionally removed.
+vite build succeeds (21 modules). The output is identical to dist/ built on 2026-09-22.
 
-No old UI should be restored.
+Not connected:
+
+src/App.jsx (984 lines, last changed 2026-09-24) contains the earlier visual prototype "FOUNDATION RESET (R0)" with five levels L0 SHELL, L1 NAVIGATION, L2 WORKSPACE, L3 INTELLIGENCE, L4 SYSTEM. It is not imported anywhere and does not appear in the running application.
 
 ---
 
 # 9. CURRENT REPOSITORY STATE
 
-After Phase 0:
+Verified 2026-09-27:
 
 
 requiem-tauri/
 
 ├── src/
-│ ├── App.jsx
+│ ├── main.jsx
 │ ├── index.css
-│ └── main.jsx
+│ ├── App.jsx            (not connected, see section 8)
+│ ├── App.css            (empty)
+│ ├── app/
+│ │ ├── AppRoot.jsx
+│ │ ├── shell/           (RequiemShell, WindowFrame)
+│ │ ├── layout/          (MainLayout)
+│ │ ├── workspace/       (Workspace)
+│ │ └── modules/         (environment, intelligence, navigation, system — empty)
+│ ├── core/
+│ │ ├── contracts/       (UserIntent, OperationRequest, OperationResult, EnvironmentState, EngineCommand, EngineResponse)
+│ │ ├── intelligence/    (boundary only)
+│ │ ├── operations/      (boundary only)
+│ │ ├── environment/     (boundary only)
+│ │ └── configuration/   (boundary only)
+│ ├── adapters/contracts/ (empty)
+│ ├── components/shared/  (empty)
+│ ├── styles/             (empty)
+│ └── assets/react.svg
 │
 ├── src-tauri/
-│
+├── public/
 ├── package.json
 ├── package-lock.json
 ├── index.html
@@ -262,6 +282,16 @@ requiem-tauri/
 ├── tailwind.config.js
 └── postcss.config.js
 
+
+Phase 1 success criteria (REQUIEM_PHASE_1_CORE_SKELETON_SPEC_v0.3.md, section 16), checked against the code:
+
+- folder structure created — yes;
+- ownership boundaries defined — yes (core boundary modules);
+- contracts defined — yes, all six contracts of REQUIEM_PHASE_1_CORE_SKELETON_SPEC_v0.3.md, section 14;
+- build remains functional — yes;
+- no layer violations introduced — none found: core modules contain no UI, shell components contain no system logic.
+
+Formal completion of Phase 1 is a decision of the human owner.
 
 (Actual tree must always be verified against repository.)
 
@@ -380,16 +410,16 @@ S.T.A.L.K.E.R. 2 Integration
 
 # 15. CURRENT CHECKPOINT
 
-Current state:
+Current state (2026-09-27):
 
 
 PHASE 0 COMPLETE
 
-PROJECT STATUS:
-Clean foundation
+PHASE 1 CORE SKELETON: present in code, success criteria met (section 9); formal completion — decision of the owner
 
-NEXT ACTION:
-Phase 1 Core Skeleton Preparation
+ACTIVE WORK STREAM: Visual Core (Decision #011)
+
+FROZEN: Execution Engine (PowerShell), Memory Core development, new architecture documentation
 
 
 ---
@@ -404,22 +434,7 @@ Do not repeat demolition.
 
 Do not redesign old systems.
 
-Assume:
-
-- Phase 0 completed;
-- repository cleaned;
-- foundation preserved;
-- Phase 1 documentation prepared.
-
-Continue from:
-
-
-Phase 1 — REQUIEM Core Skeleton
-
-
-First produce architecture documentation.
-
-Only after approval begin implementation.
+Continue from docs/system/REQUIEM_ACTIVE_SESSION.md in the repository jonysilvervi/Requiem.
 
 ---
 
