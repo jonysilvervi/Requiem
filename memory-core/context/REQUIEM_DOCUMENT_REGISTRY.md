@@ -2,10 +2,10 @@
 
 Version: 0.7
 
-Status: DRAFT
+Status: APPROVED
 
 
-Version 0.7 registers DOC-022 (section 8.6) and records the current versions of DOC-004 (0.6) and DOC-022 (0.5). This is a new registration under rule 5, not administrative metadata under rule 10, so version 0.7 requires human approval (rule 8) before this registry returns to APPROVED status. The approval records and approved status of DOC-017 … DOC-021 (sections 8.4, 8.5, 8.6) are unaffected: they describe those documents' own approval, not this registry's.
+Version 0.7 registers DOC-022 (section 8.6) and records the current versions of DOC-004 (0.6) and DOC-022 (0.5). This is a new registration under rule 5, not administrative metadata under rule 10, so version 0.7 requires human approval (rule 8) before this registry returns to APPROVED status. The approval records and approved status of DOC-017 … DOC-021 (sections 8.4, 8.5, 8.6) are unaffected: they describe those documents' own approval, not this registry's. Version 0.7 was approved by the human maintainer on 2026-09-27 (section 8.5).
 
 
 ---
@@ -306,7 +306,7 @@ These documents keep status DRAFT until the conflicts are resolved.
 | ID | Document | Version | Category | Level | Status | Implementation | Knowledge level | Approval record |
 |---|---|---|---|---|---|---|---|---|
 | DOC-017 | context/REQUIEM_GLOSSARY.md | 0.4 | Reference | 1 | APPROVED | not applicable | Ecosystem | version 0.3: approved by the human maintainer, 2026-09-24; version 0.4: approved by the human maintainer, 2026-09-25 |
-| DOC-018 | context/REQUIEM_DOCUMENT_REGISTRY.md | 0.6 | Reference | 1 | APPROVED | not applicable | Ecosystem | version 0.4: approved by the human maintainer, 2026-09-24; version 0.5: not approved separately, contained in 0.6; version 0.6: approved by the human maintainer, 2026-09-25 |
+| DOC-018 | context/REQUIEM_DOCUMENT_REGISTRY.md | 0.7 | Reference | 1 | APPROVED | not applicable | Ecosystem | version 0.4: approved by the human maintainer, 2026-09-24; version 0.5: not approved separately, contained in 0.6; version 0.6: approved by the human maintainer, 2026-09-25; version 0.7: approved by the human maintainer, 2026-09-27 |
 | DOC-019 | context/REQUIEM_INSTANCE_MODEL.md | 0.3 | Model | 1 | APPROVED | not implemented | System | version 0.3: approved by the human maintainer, 2026-09-24 |
 | DOC-020 | context/REQUIEM_FOUNDATION_DECISIONS.md | 0.4 | Decision | 2 | APPROVED | not applicable | Ecosystem and System | version 0.4: approved by the human maintainer, 2026-09-24 |
 
@@ -339,7 +339,7 @@ Relations:
 Approved documents (current version approved):
 
 - DOC-017 REQUIEM_GLOSSARY.md v0.4;
-- DOC-018 REQUIEM_DOCUMENT_REGISTRY.md v0.6;
+- DOC-018 REQUIEM_DOCUMENT_REGISTRY.md v0.7;
 - DOC-019 REQUIEM_INSTANCE_MODEL.md v0.3;
 - DOC-020 REQUIEM_FOUNDATION_DECISIONS.md v0.4;
 - DOC-021 REQUIEM_KNOWLEDGE_MODEL_SCOPE.md v0.3.
@@ -368,9 +368,10 @@ Approved files are identified by SHA-256 (as delivered for approval):
 | REQUIEM_GLOSSARY.md | 0.4 | 2026-09-25 | 87b6cba9a711b9c7ab7d4adbbb84c2e2116188f4c8569d8afb9c9fa1ea4bd9d1 |
 | REQUIEM_DOCUMENT_REGISTRY.md | 0.6 | 2026-09-25 | 28837d15d7e24321d65da9cf39ab90cc53cd40576069709591b4021fab30fe51 |
 | REQUIEM_KNOWLEDGE_MODEL_SCOPE.md | 0.3 | 2026-09-25 | 779858338d30ea63a107015f4b618eb1baba79be2809c0afb12cb3c2f692428b |
+| REQUIEM_DOCUMENT_REGISTRY.md | 0.7 | 2026-09-27 | 1c53c2fc5a19a2f26cf7dc86dab3d7f4f4551510e9c260ede0c8fe45ed97a986 |
 
 
-The registry file with these approval records differs from the approved version 0.6 (SHA-256 above) only by administrative metadata under rule 10.
+The registry file with these approval records differs from the approved version 0.7 (SHA-256 above) only by administrative metadata under rule 10.
 
 
 ## 8.6 Knowledge Model documents

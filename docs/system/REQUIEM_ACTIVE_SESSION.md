@@ -40,6 +40,7 @@ REQUIEM Visual Core (Decision #011).
 - Documentation moved into the repository jonysilvervi/Requiem (Decision #008).
 - Memory Core put into a clean pause: Knowledge Model v0.5 with the recorded boundary decision and a resume point; development protocol, state and registry updated.
 - Ecosystem documentation brought up to date: Decision Log, Changelog, this file, reading order.
+- REQUIEM_DOCUMENT_REGISTRY.md v0.7 approved by the human owner.
 
 ---
 
@@ -53,7 +54,7 @@ REQUIEM Visual Core (Decision #011).
 
 # OPEN QUESTIONS
 
-- Approval of memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md v0.7 by the human owner.
+- None.
 
 ---
 

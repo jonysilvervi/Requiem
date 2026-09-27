@@ -41,7 +41,7 @@ Basis:
 
 - REQUIEM_INSTANCE_MODEL.md v0.3 (DOC-019, APPROVED);
 
-- REQUIEM_DOCUMENT_REGISTRY.md v0.7 (DOC-018, DRAFT, not approved — cited here as the current dependency for document rules and statuses, not as part of the approved foundation the entries above belong to).
+- REQUIEM_DOCUMENT_REGISTRY.md v0.7 (DOC-018, APPROVED 2026-09-27 — cited here as the current dependency for document rules and statuses).
 
 
 Like REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, this document is a logical model. It does not define storage, does not implement anything, and does not change CP-006 (REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 2; REQUIEM_KNOWLEDGE_MODEL_SCOPE.md, section 5).

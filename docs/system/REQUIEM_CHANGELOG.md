@@ -232,6 +232,8 @@ REQUIEM_KNOWLEDGE_MODEL.md reached version 0.5 (DRAFT). The human decision on th
 
 Memory Core development paused (Decision #009).
 
+REQUIEM_DOCUMENT_REGISTRY.md v0.7 approved by the human maintainer (memory-core/context/REQUIEM_DOCUMENT_REGISTRY.md, section 8.5).
+
 ---
 
 # Active work stream changed
