@@ -49,7 +49,8 @@ REQUIEM Visual Core (Decision #011).
 - New GPT chat restored the full context from the repository alone (context recovery test passed).
 - Information standard recorded (Decision #014 [ED-014]); identifier registry initialized in docs/system/REQUIEM_DOCUMENTATION_INDEX.md.
 - Ecosystem roadmap saved: docs/system/REQUIEM_ROADMAP.md (drafted by GPT, owner-confirmed area statuses) and its visual view docs/system/REQUIEM_ROADMAP.html.
-- Claude Code session rules written: CLAUDE.md in jonysilvervi/requiem-tauri (branch docs/claude-md, awaiting owner merge).
+- Practical working cycle recorded: docs/ai/COMMON/REQUIEM_AI_WORKFLOW.md, section 8; shown in the roadmap (Markdown and visual view).
+- Claude Code session rules written: CLAUDE.md in jonysilvervi/requiem-tauri (merged).
 - Owner: the PowerShell engine works only with S.T.A.L.K.E.R. 2. GPT recommends treating its S.T.A.L.K.E.R.-specific part as a S.T.A.L.K.E.R. 2 adapter over a generic Execution Engine; not decided, to be decided when the engine is unfrozen (related: O6, [Q-001]).
 - Reference for the four calibrated colors decided by the owner: R0 values with all four Dev Panel sliders at their default 1.00 (used by [TASK-001]).
 

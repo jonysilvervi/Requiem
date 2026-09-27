@@ -41,6 +41,11 @@ Updated: 2026-09-27
 - **ISS-006** — Application PowerShell bridge is a stub; real execution code location is open.
 - **ISS-007** — Bridge action input is not escaped and must be fixed before real input is used.
 
+## Working Cycle
+
+Idea → GPT analysis → owner decides → GPT task spec → Claude checks the spec → Claude implements on a branch → owner checks by hand → GPT reviews the report → owner OK → merge → Claude updates session state and this roadmap.
+Small visual tweaks go straight to Claude Code (Level 0). Full description: docs/ai/COMMON/REQUIEM_AI_WORKFLOW.md, section 8.
+
 ## Update Rule
 
 Claude updates this roadmap after each completed STEP, together with its visual view `docs/system/REQUIEM_ROADMAP.html`; GPT reviews the update before owner approval. If the two differ, this file is right.
