@@ -244,6 +244,14 @@ Active: REQUIEM Visual Core (Decision #011).
 
 ---
 
+# REQUIEM Application under version control
+
+Application code put into the repository jonysilvervi/requiem-tauri. Application documents checked against the code (docs/app/NOTES.md).
+
+Phase 1 stays open until the foundation is polished (Decision #012).
+
+---
+
 # FUTURE ENTRIES
 
 Future changes should include:

@@ -42,21 +42,22 @@ REQUIEM Visual Core (Decision #011).
 - Ecosystem documentation brought up to date: Decision Log, Changelog, this file, reading order.
 - REQUIEM_DOCUMENT_REGISTRY.md v0.7 approved by the human owner.
 - REQUIEM Application documents checked against the code: Phase 1 skeleton exists, build works; REQUIEM_CURRENT_STATE_SNAPSHOT.md v0.3, docs/app/NOTES.md.
+- Application code put under git: repository jonysilvervi/requiem-tauri.
+- Phase 1 stays open until the foundation is polished (Decision #012).
 
 ---
 
 # NEXT ACTIONS
 
-1. Put requiem-tauri under git as its own repository (in place, without moving the folder) and give Claude and GPT access to it.
-2. Owner decisions from docs/app/NOTES.md: formal completion of Phase 1; what happens to the unconnected R0 prototype in src/App.jsx.
-3. Start Visual Core work.
+1. First Visual Core task: decide with the Architect how the R0 prototype (src/App.jsx, src/index.css) is carried into the new structure (docs/app/NOTES.md, finding 1).
+2. Owner: say where the PowerShell Execution Engine code lives (docs/app/NOTES.md, finding 6).
 
 ---
 
 # OPEN QUESTIONS
 
-- Formal completion of Phase 1 (docs/app/NOTES.md).
-- Fate of the R0 visual prototype in src/App.jsx (docs/app/NOTES.md, finding 1).
+- How the R0 visual prototype is carried into the new structure (docs/app/NOTES.md, finding 1).
+- Location of the PowerShell Execution Engine code (docs/app/NOTES.md, finding 6).
 
 ---
 

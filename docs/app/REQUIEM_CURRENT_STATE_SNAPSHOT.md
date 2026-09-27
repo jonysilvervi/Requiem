@@ -36,6 +36,8 @@ Current stack:
 - Framer Motion
 - Windows WebView2 environment
 
+Code repository: jonysilvervi/requiem-tauri (GitHub, private).
+
 Current repository root:
 
 
@@ -226,7 +228,7 @@ Do not delete without architectural review.
 
 # 8. CURRENT APPLICATION STATE
 
-Verified against the code on 2026-09-27 (archive of requiem-tauri without src-tauri; src-tauri not checked).
+Verified against the code on 2026-09-27 (repository jonysilvervi/requiem-tauri, including src-tauri).
 
 Entry point:
 
@@ -291,7 +293,7 @@ Phase 1 success criteria (REQUIEM_PHASE_1_CORE_SKELETON_SPEC_v0.3.md, section 16
 - build remains functional — yes;
 - no layer violations introduced — none found: core modules contain no UI, shell components contain no system logic.
 
-Formal completion of Phase 1 is a decision of the human owner.
+Phase 1 stays open by decision of the owner (Decision #012).
 
 (Actual tree must always be verified against repository.)
 
@@ -415,7 +417,7 @@ Current state (2026-09-27):
 
 PHASE 0 COMPLETE
 
-PHASE 1 CORE SKELETON: present in code, success criteria met (section 9); formal completion — decision of the owner
+PHASE 1 CORE SKELETON: present in code, success criteria met (section 9); phase stays OPEN by decision of the owner (Decision #012)
 
 ACTIVE WORK STREAM: Visual Core (Decision #011)
 
